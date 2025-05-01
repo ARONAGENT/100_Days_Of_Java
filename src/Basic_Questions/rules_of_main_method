@@ -1,0 +1,34 @@
+## ✅ **Theory: Rules for a Valid `main()` Method in Java**
+In Java, the `main()` method is the **entry point** for every standalone application.
+When you run a Java program, the **JVM looks for a method with a specific signature** to start the execution.
+That method is:
+
+```java
+public static void main(String[] args)
+```
+### ✅ **Rules for a valid `main()` method:**
+To be recognized by the JVM as the starting point of execution, the `main()` method must follow **all of these rules**:
+
+1. **Must be `public`**
+   - The method needs to be **accessible from outside the class**, as the JVM invokes it using reflection from outside your class.
+
+2. **Must be `static`**
+   - The JVM **doesn't create an object** of your class to call `main()`.
+   - Hence, it must be static so that it can be **invoked without an object**.
+
+3. **Must return `void`**
+   - It should not return any value to the JVM.
+   - If a different return type is used (like `int`), it will result in a **runtime error**: `main method not found`.
+
+4. **Must take one parameter: `String[] args`**
+   - This parameter is used to accept **command-line arguments**.
+   - Java also allows some variations: `String args[]` or `String... args` (varargs), all of which are valid.
+
+## ✅ Best Practice
+Use only one `main()` method per class:
+```java
+public static void main(String[] args) {
+    // start your application logic here
+}
+```
+
