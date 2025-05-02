@@ -1,0 +1,116 @@
+Why Java is not 100% object Oriented
+Java is **not 100% object-oriented** because it includes a few elements that are **not objects**.
+---
+
+### ✅ Reasons Why Java is *Not* 100% Object-Oriented
+
+| Feature                       | Why It Breaks 100% OOP Concept                                                                       |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Primitive Data Types**      | Java has 8 primitive types (`int`, `float`, `char`, etc.) which are **not objects**.                 |
+| **Static Methods/Variables**  | These belong to the class, not to any object instance.                                               |
+| **`null` Keyword**            | Represents the absence of an object; it's not an object itself.                                      |
+| \**Operators (like +, -, *)** | These are not objects; Java uses **operator overloading internally** for primitives.                 |
+| **Wrapper Classes**           | While `Integer`, `Double`, etc. wrap primitives, the primitives themselves still exist and are used. |
+
+---
+
+### 🧠 Key Insight:
+
+> Java follows the object-oriented paradigm **very closely**,
+but it **breaks the pure OOP model** by allowing primitives and static context.
+
+
+---
+
+### ✅ Contrast:
+
+* **Pure Object-Oriented Languages**: Languages like **Smalltalk** or **Ruby** treat *everything* (including numbers, operations) as objects.
+* **Java**: Is about **95–98% object-oriented**.
+
+---
+
+### 🧾 Summary:
+
+> Java is *not* 100% object-oriented because it supports **primitive types** and **static members**, which don't conform to object behavior.
+
+Hinglish ->-----------
+Bilkul! Yahaan pe main aapko batata hoon **hinglish (Hindi + English)** mein ki **Java 100% object-oriented kyun nahi hai**:
+
+---
+
+## 🤔 Java 100% Object-Oriented Kyun Nahi Hai?
+
+Java ek **object-oriented programming language** hai, lekin **pure 100% object-oriented nahi hai**. Yahaan kuch wajah hain:
+
+---
+
+### ✅ 1. **Primitive Data Types**
+
+Java mein 8 primitive types hote hain:
+
+```java
+int, float, double, char, boolean, byte, short, long
+```
+
+Ye sab **objects nahi hote**, balki simple values hote hain.
+
+🧠 **Example:**
+
+```java
+int a = 10; // 'a' ek object nahi hai, primitive hai
+```
+
+Agar Java 100% OOP hota to har cheez object hoti — lekin yahaan primitive alag hain.
+
+---
+
+### ✅ 2. **Static Keywords**
+
+`static` methods ya variables kisi **object se belong nahi karte**, woh directly class se related hote hain.
+
+🧠 Example:
+
+```java
+public class Test {
+    static void show() {
+        System.out.println("Hello");
+    }
+}
+```
+
+Isse object banaye bina bhi call kar sakte ho: `Test.show();`
+
+---
+
+### ✅ 3. **null Keyword**
+
+`null` Java mein kaafi common hai, lekin ye khud **koi object nahi hai** — balki iska matlab hai: "koi object nahi hai".
+
+---
+
+### ✅ 4. \**Operators (like +, -, *, /)**
+
+Java mein `+` jaise operators directly primitive values pe kaam karte hain. Ye kisi object ke method ke through nahi chalte.
+
+---
+
+### ✅ 5. **Wrapper Classes ka Solution (par abhi bhi)**
+
+Java ne primitive types ke liye wrapper classes di hain jaise:
+
+```java
+int → Integer
+double → Double
+boolean → Boolean
+```
+
+Lekin fir bhi, primitive types Java ke andar exist karte hain — isliye ye 100% object-oriented nahi kehlata.
+
+---
+
+## ✅ Ek Line Summary:
+
+> Java **pure OOP nahi hai** kyunki isme **primitive types**, `static` methods, aur `null` jaise features hote hain jo **object ke bina** kaam karte hain.
+
+---
+
