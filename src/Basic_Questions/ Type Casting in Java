@@ -1,0 +1,71 @@
+## 🔁 Type Casting in Java
+
+Type casting means **converting a variable from one data type to another**.
+
+There are **two types**:
+
+---
+
+### ✅ 1. **Implicit Type Casting** (Widening Conversion)
+
+* Done **automatically by Java**.
+* Happens when converting **smaller to larger** data type (no data loss).
+
+📌 **Example:**
+
+```java
+int a = 10;
+double b = a; // int to double (automatically)
+System.out.println(b); // Output: 10.0
+```
+
+✔️ **Why allowed?**
+No risk of data loss → safe conversion.
+
+---
+
+### ✅ 2. **Explicit Type Casting** (Narrowing Conversion)
+
+* Done **manually by programmer**.
+* Happens when converting **larger to smaller** data type (possible data loss).
+
+📌 **Example:**
+
+```java
+double x = 12.56;
+int y = (int) x; // double to int (manual cast)
+System.out.println(y); // Output: 12
+```
+
+✔️ **Why required?**
+Risk of data loss → compiler needs confirmation using cast.
+
+---
+
+## 🧠 Hinglish Explanation:
+
+### 👉 Implicit Casting:
+
+> Jab choti type (like `int`) ko badi type (like `double`) mein convert karte ho aur Java **khud hi kar leta hai**, use kehte hain **implicit casting**.
+
+📌 Example:
+
+```java
+int a = 5;
+double b = a; // Java ne khud int ko double banaya
+```
+
+---
+
+### 👉 Explicit Casting:
+
+> Jab badi type (like `double`) ko choti type (like `int`) mein convert karte ho aur humein **khud cast lagani padti hai**, use kehte hain **explicit casting**.
+
+📌 Example:
+
+```java
+double x = 99.99;
+int y = (int) x; // Humne khud cast kiya, warna error aata
+```
+
+---
