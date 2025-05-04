@@ -1,0 +1,75 @@
+### 🧱 What are Wrapper Classes in Java?
+
+**Wrapper classes** in Java are **object representations** of primitive data types.
+They **"wrap" a primitive value into an object**, allowing primitives to be used where **objects are required**
+— like in collections (`ArrayList`, `HashMap`, etc.).
+
+---
+
+### ✅ Java’s 8 Primitive Types and Their Wrapper Classes:
+
+| Primitive Type | Wrapper Class |
+| -------------- | ------------- |
+| `byte`         | `Byte`        |
+| `short`        | `Short`       |
+| `int`          | `Integer`     |
+| `long`         | `Long`        |
+| `float`        | `Float`       |
+| `double`       | `Double`      |
+| `char`         | `Character`   |
+| `boolean`      | `Boolean`     |
+
+---
+
+### 🔄 Why Do We Need Wrapper Classes?
+
+1. ✅ To use **primitive values in collections** (like `ArrayList`, which stores only objects).
+2. ✅ For **conversion** between string and primitive (`Integer.parseInt("123")`).
+3. ✅ For **utility methods** like comparison, parsing, etc.
+4. ✅ For **autoboxing/unboxing** (automatic conversion).
+
+---
+
+### 🧪 Example:
+
+```java
+int num = 10;
+
+// Wrapping manually (Boxing)
+Integer obj = Integer.valueOf(num);
+
+// Unwrapping manually (Unboxing)
+int unboxed = obj.intValue();
+
+System.out.println("Object: " + obj);       // Output: 10
+System.out.println("Unboxed: " + unboxed);  // Output: 10
+```
+
+---
+
+### 🔁 Autoboxing & Unboxing (Since Java 5)
+
+```java
+Integer autoBox = 50;      // Autoboxing: int → Integer
+int autoUnbox = autoBox;   // Unboxing: Integer → int
+```
+
+---
+
+### 🧠 Hinglish Summary:
+
+> Java mein primitive types (jaise `int`, `char`) objects nahi hote. Jab humein unhe **object ke form mein use karna hota hai**, toh hum **wrapper classes** ka use karte hain.
+> Jaise `int` ke liye `Integer`, `char` ke liye `Character` — yeh classes primitive ko object bana deti hain.
+
+---
+
+| Wrapper Type | Caching Available?   | Cache Range           | `==` Works for | Notes                       |
+| ------------ | -------------------- | --------------------- | -------------- | --------------------------- |
+| Integer      | ✅ Yes                | -128 to 127           | Small values   | Autoboxing uses cache       |
+| Long         | ✅ Yes                | -128 to 127           | Small values   | Same as Integer             |
+| Short        | ✅ Yes                | -128 to 127           | Small values   | Rarely used                 |
+| Byte         | ✅ Yes                | Full Byte range       | All values     | Byte range is -128 to 127   |
+| Character    | ✅ Yes                | 0 to 127 (ASCII)      | ASCII chars    | Only ASCII range cached     |
+| Float        | ❌ No                 | —                     | Never          | Always creates new object   |
+| Double       | ❌ No                 | —                     | Never          | Always creates new object   |
+| String       | ⚠️ Yes (String Pool) | Interned strings only | Literals only  | Use `.equals()` for content |
