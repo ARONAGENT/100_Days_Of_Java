@@ -1,0 +1,57 @@
+## ✅ Where Are Static Variables Stored in Java 8?
+
+In **Java 8**, the **Method Area** concept was restructured.
+The old **PermGen space** (used for storing class metadata and static variables) was **removed**,
+ and replaced by **Metaspace**, which is **part of native memory (not JVM heap)**.
+
+### 🔍 Updated Allocation in Java 8:
+----------------------------------------------------
+| Component          | Memory Area                 |
+| ------------------ | --------------------------- |
+| Static variables   | **Heap** ✅ *(since Java 8)* |
+| Class metadata     | Metaspace (native memory)   |
+| Instance variables | Heap                        |
+| Local variables    | Stack                       |
+| Method call info   | Stack                       |
+----------------------------------------------------
+---
+
+## 💡 So, what changed in Java 8?
+
+* **Before Java 8 (Java 7 and earlier)**:
+  Static variables lived in the **PermGen (method area)**.
+
+* **Since Java 8**:
+
+  * **Class metadata** is stored in **Metaspace**.
+  * **Static variables are stored in the Heap**, **not** in Metaspace or Method Area.
+
+---
+
+## 🧠 Hinglish Clarification:
+
+> Java 8 ke baad static variables bhi **Heap memory** mein store hote hain.
+Pehle yeh **Method Area / PermGen** mein hote the, lekin ab PermGen hata diya gaya hai
+ aur class metadata ke liye **Metaspace** use hota hai (jo JVM heap ka part nahi hota).
+>
+> 🧠 Toh static variables ab **Heap memory** mein hi store hote hain
+ — just like instance variables — **but still shared across all objects**.
+
+---
+
+## ✅ Summary Table (Java 8+)
+
+| Item               | Location                         |
+| ------------------ | -------------------------------- |
+| Static Variables   | ✅ **Heap**                       |
+| Instance Variables | ✅ **Heap**                       |
+| Class Metadata     | 🔄 **Metaspace (native memory)** |
+| Local Variables    | 📌 **Stack**                     |
+| Method Call Info   | 📌 **Stack**                     |
+
+🧠 Hinglish Explanation:
+Static variable ek baar memory mein banta hai jab class load hoti hai.
+Java 8 ke baad yeh bhi Heap mein hi store hota hai, lekin yeh shared hota hai sabhi objects ke liye.
+
+Instance (normal) variable har object ke sath alag banta hai aur Heap mein store hota hai.
+Agar 3 object banao, toh variable bhi 3 copies mein banega.
