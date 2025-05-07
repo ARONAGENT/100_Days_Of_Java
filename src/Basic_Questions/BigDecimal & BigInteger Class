@@ -1,0 +1,83 @@
+## ✅ `BigDecimal` vs `BigInteger` in Java
+
+Java provides two powerful classes in the `java.math` package to handle **large** and **precise** numbers:
+
+| Class        | Used For                        | Handles Decimals? | Precision Type         | Common Use Case         |
+| ------------ | ------------------------------- | ----------------- | ---------------------- | ----------------------- |
+| `BigInteger` | Very large **whole numbers**    | ❌ No              | Unlimited integer size | Factorial, crypto, math |
+| `BigDecimal` | Very **precise decimal** values | ✅ Yes             | Arbitrary precision    | Finance, tax, billing   |
+
+---
+
+### 🔍 Why not use `int`, `long`, `float`, or `double`?
+
+| Type               | Limitation                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| `int`              | Overflow above 2<sup>31</sup>−1 (≈ 2 billion)                                        |
+| `long`             | Overflow above 2<sup>63</sup>−1 (very large, but not unlimited)                      |
+| `float` / `double` | Decimal rounding errors due to binary representation (e.g., 0.1 + 0.2 ≠ 0.3 exactly) |
+
+---
+
+### ✅ When to Use
+
+* **Use `BigInteger`** when you need **accurate operations on large whole numbers**, like in:
+
+  * Factorials
+  * Cryptography
+  * Prime number calculations
+
+* **Use `BigDecimal`** when you need **precise decimal calculations**, such as:
+
+  * Currency / Banking
+  * Tax / Invoice systems
+  * Scientific data processing
+
+---
+
+### 🔧 Common Methods
+
+| Method              | `BigInteger`         | `BigDecimal`               |
+| ------------------- | -------------------- | -------------------------- |
+| `add()`             | ✅                    | ✅                          |
+| `subtract()`        | ✅                    | ✅                          |
+| `multiply()`        | ✅                    | ✅                          |
+| `divide()`          | ✅                    | ✅ (with rounding mode)     |
+| `pow(int)`          | ✅                    | ✅                          |
+| `mod()`             | ✅ (modulus operator) | ❌                          |
+| `compareTo()`       | ✅                    | ✅                          |
+| `setScale()`        | ❌                    | ✅ (control decimal places) |
+| `valueOf(int/long)` | ✅                    | ✅                          |
+
+---
+
+### 🧠 Hinglish Explanation:
+
+> 🔹 `BigInteger` ka use tab karte hain jab **bahut bade whole number** chahiye ho — jaise factorial ya encryption. Ye `int` ya `long` se kahin zyada bada number handle kar sakta hai.
+> 🔹 `BigDecimal` ka use tab karte hain jab **point wale number (decimal)** ka accurate calculation chahiye — jaise paiso ka hisaab. `float` aur `double` galti karte hain decimal mein.
+> **Banking aur finance** ke use-case mein `BigDecimal` must hai.
+
+---
+
+### 📌 Related Classes (also in `java.math`):
+
+| Class          | Purpose                                                       |
+| -------------- | ------------------------------------------------------------- |
+| `MathContext`  | Defines precision and rounding for `BigDecimal` operations    |
+| `RoundingMode` | Enum to specify how to round values (e.g., HALF\_UP, CEILING) |
+
+---
+
+### ✅ Summary Table
+
+| Feature          | `BigInteger`           | `BigDecimal`           |
+| ---------------- | ---------------------- | ---------------------- |
+| Decimal Support  | ❌                      | ✅                      |
+| Used For         | Whole numbers          | Decimal precision      |
+| Handles Overflow | ✅ Unlimited            | ✅ Unlimited            |
+| Suitable For     | Math, Crypto           | Finance, Billing       |
+| Performance      | Slower than primitives | Slower than primitives |
+
+---
+
+
