@@ -1,0 +1,43 @@
+### ✅ **Java Static Block (Initialization Block)**
+
+A **static block** in Java is used to **initialize static variables**.
+It is executed **only once** when the class is **first loaded into memory**, *before* the `main()` method runs.
+
+---
+
+### 🧪 Simple Example:
+
+```java
+public class StaticBlockDemo {
+    static int number;
+
+    // Static block
+    static {
+        number = 50;
+        System.out.println("Static block executed. Number set to: " + number);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main method started. Number is: " + number);
+    }
+}
+```
+
+---
+
+### 🔍 Output:
+
+```
+Static block executed. Number set to: 50
+Main method started. Number is: 50
+```
+
+---
+
+### 🧠 Hinglish Explanation:
+
+> Jab Java class memory mein load hoti hai, tab static block **sirf ek baar** run hota hai.
+> Ye mainly **static variables ko initialize karne** ke liye use hota hai.
+> `main()` se pehle chalta hai — jise aap ek baar ka setup samajh sakte ho.
+
+---
