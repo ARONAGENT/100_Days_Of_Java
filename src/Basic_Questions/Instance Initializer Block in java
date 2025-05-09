@@ -1,0 +1,87 @@
+## ✅ **Instance Initializer Block in Java – Full Theory**
+
+### 🔹 **Definition:**
+
+An **Instance Initializer Block (IIB)** is a block of code enclosed in `{ }`
+that is **not inside any method or constructor**, and it is executed **each time an object is created**,
+just **before the constructor**.
+
+---
+
+### 🔹 **Syntax:**
+
+```java
+{
+    // instance initializer block
+}
+```
+
+You can have **multiple instance blocks** in a class. They execute in the **order they appear** in the class definition.
+
+---
+
+### 🔹 **When is it executed?**
+
+* It runs **when a new object is created**.
+* It is executed **before any constructor**.
+* If multiple constructors exist, IIB ensures **common code is not repeated** in each constructor.
+
+---
+
+### 🔹 **Why use it?**
+
+* To initialize **instance variables** or perform **common setup tasks**.
+* To **avoid repeating code** in multiple constructors.
+* Useful when **anonymous inner classes** or **initializing blocks** are used in frameworks.
+
+---
+
+### 🔹 **Example:**
+
+```java
+public class Demo {
+    int a;
+
+    {
+        // Instance block
+        a = 10;
+        System.out.println("Instance block: a = " + a);
+    }
+
+    public Demo() {
+        System.out.println("Constructor called");
+    }
+}
+```
+
+---
+
+### 🔹 **Execution Flow:**
+
+1. Class is loaded (if not already).
+2. Memory is allocated.
+3. **Instance Initializer Block** runs.
+4. **Constructor** runs.
+
+---
+
+### 🔹 **Comparison Table:**
+
+| Feature                      | Instance Block                    | Constructor                     |
+| ---------------------------- | --------------------------------- | ------------------------------- |
+| Belongs to                   | Object                            | Object                          |
+| Executes when                | Object is created                 | After IIB(instance initializer block)|
+| Access to instance variables | Yes                               | Yes                             |
+| Purpose                      | Common logic for all constructors | Object-specific logic           |
+| Can be overloaded?           | ❌ No                              | ✅ Yes (constructor overloading) |
+
+---
+
+### 🧠 Hinglish Explanation:
+
+> Java mein jab bhi aap `new` keyword se object banate ho, sabse pehle **Instance Initializer Block** run hota hai, fir constructor.
+>
+> Agar aapke paas **multiple constructors** hain, aur kuch **common logic** sabme likhna hai (jaise variable initialize karna ya print karna), toh us logic ko aap IIB mein likh sakte ho.
+> Isse har constructor mein baar-baar wahi code likhne ki zarurat nahi padti.
+
+---
