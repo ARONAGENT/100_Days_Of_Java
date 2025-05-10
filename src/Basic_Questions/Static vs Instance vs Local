@@ -1,0 +1,123 @@
+## 🧠 Java Variable Types: Static vs Instance vs Local
+
+### 1️⃣ `static` Variables (a.k.a **Class Variables**)
+
+#### ✅ Definition:
+
+A static variable belongs to the **class** and not to any specific object. It is **shared across all objects** of the class.
+
+#### ✅ Syntax:
+
+```java
+static int count = 0;
+```
+
+#### ✅ Key Points:
+
+* Declared using the `static` keyword inside a class but **outside any method**.
+* Memory allocated **only once** at **class loading time**.
+* Shared among **all objects**.
+* Can be accessed using `ClassName.variableName` or via object reference.
+* Initialized with **default values** if not explicitly set.
+
+#### ✅ Memory Location:
+
+Stored in the **Method Area (MetaSpace in Java 8+)** — earlier considered part of the heap but now separate in modern JVMs.
+
+#### ✅ Default Values:
+
+| Type    | Default |
+| ------- | ------- |
+| int     | 0       |
+| float   | 0.0f    |
+| boolean | false   |
+| String  | null    |
+
+---
+
+### 2️⃣ `instance` Variables (a.k.a **Object Variables**)
+
+#### ✅ Definition:
+
+An instance variable belongs to **each object (instance)** of the class.
+
+#### ✅ Syntax:
+
+```java
+int id;
+```
+
+#### ✅ Key Points:
+
+* Declared inside the class but **outside any method or block**.
+* Memory allocated when **object is created**.
+* Each object gets its **own copy** of the variable.
+* Automatically initialized with **default values**.
+
+#### ✅ Memory Location:
+
+Stored in the **Heap**, as part of the object's memory.
+
+#### ✅ Default Values:
+
+| Type    | Default |
+| ------- | ------- |
+| int     | 0       |
+| float   | 0.0f    |
+| boolean | false   |
+| String  | null    |
+
+---
+
+### 3️⃣ `local` Variables
+
+#### ✅ Definition:
+
+Local variables are declared **within a method, constructor, or block**, and exist only during the execution of that block.
+
+#### ✅ Syntax:
+
+```java
+void show() {
+    int temp = 10;
+}
+```
+
+#### ✅ Key Points:
+
+* Scope is **limited to the block** in which it's declared.
+* **Not initialized automatically** — you **must assign a value** before use.
+* Not accessible outside its scope.
+
+#### ✅ Memory Location:
+
+Stored in the **Stack**.
+
+#### ✅ Default Values:
+
+❌ **None**. Must be initialized manually or compiler will throw an error.
+
+---
+
+### 🔄 Comparison Table
+
+| Feature              | Static Variable             | Instance Variable                | Local Variable                |
+| -------------------- | --------------------------- | -------------------------------- | ----------------------------- |
+| Belongs to           | Class                       | Object                           | Block/Method                  |
+| Keyword              | `static`                    | —                                | —                             |
+| Memory Allocation    | At class load (Method Area) | When object is created (Heap)    | When method is called (Stack) |
+| Scope                | Entire class                | Each object                      | Limited to method/block       |
+| Default Initialized  | ✅ Yes                       | ✅ Yes                            | ❌ No                          |
+| Accessed by          | Class name or object        | Only via object                  | Only inside method            |
+| Lifespan             | Till class is unloaded      | Till object is garbage collected | Till method ends              |
+| Shared Among Objects | ✅ Yes                       | ❌ No                             | ❌ No                          |
+
+---
+
+### 🧠 Hinglish Explanation:
+
+> * `static` variable class ke liye ek hi baar banta hai, sab objects use share karte hain.
+> * `instance` variable har object ke liye naya banta hai, alag value store kar sakta hai.
+> * `local` variable sirf method ya block ke andar kaam karta hai, aur usko use karne se pehle value deni padti hai — warna error aata hai.
+
+---
