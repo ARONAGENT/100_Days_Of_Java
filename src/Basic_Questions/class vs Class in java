@@ -1,0 +1,44 @@
+### ✅ `class` vs `Class` in Java — Key Differences
+
+| Term    | Type                         | Description                                                                                                                  |
+| ------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `class` | **Keyword**                  | Java **reserved keyword** used to define a class (blueprint of objects).                                                     |
+| `Class` | **Class** (from `java.lang`) | A built-in Java **class** used for **runtime class reflection** (e.g., getting metadata like methods, fields, constructors). |
+
+---
+
+### 🔹 1. `class` (lowercase):
+
+* It's a **keyword** used in Java to define a new class.
+
+```java
+public class Dog {
+    // fields, constructors, methods
+}
+```
+
+### 🔹 2. `Class` (uppercase):
+
+* A part of Java’s **Reflection API**: `java.lang.Class<T>`
+* Represents **classes and interfaces** in a running Java application.
+* Used to inspect or manipulate class structure **at runtime**.
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        Class<?> c = String.class;
+        System.out.println("Class name: " + c.getName());  // Output: java.lang.String
+    }
+}
+```
+
+---
+
+### 🧠 Hinglish Explanation:
+
+> 🔸 `class` ek **keyword** hai jisse aap Java mein nayi class define karte ho.
+> 🔸 `Class` ek Java ki **built-in class** hai jo aapko runtime par kisi bhi class ke structure (jaise method, field) ko jaanchne ka feature deti hai.
+
+---
+
+Would you like an example using reflection (`Class` class) in detail?
