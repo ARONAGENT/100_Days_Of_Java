@@ -1,0 +1,59 @@
+### ✅ `final` Keyword in Java – Theory
+
+The `final` keyword in Java is a **non-access modifier** used to apply restrictions on variables, methods, and classes.
+
+#### 🔸 1. `final` Variable
+
+* Once assigned, its value **cannot be changed**.
+* Used to create **constants**.
+
+```java
+final int MAX_SPEED = 120;
+```
+
+> 🧠 *Think: final variable = fixed value*
+
+---
+
+#### 🔸 2. `final` Method
+
+* A final method **cannot be overridden** by subclasses.
+* Useful when you want to prevent any class from changing important behavior.
+
+```java
+class A {
+    final void show() { System.out.println("Final method"); }
+}
+```
+
+---
+
+#### 🔸 3. `final` Class
+
+* A final class **cannot be extended** (inherited).
+* Ensures no subclass modifies its behavior.
+
+```java
+final class A { }
+```
+
+> 🧠 *Think: final class = no child allowed*
+
+---
+
+### 🔐 Why Use `final`?
+
+* To enforce **immutability** (especially in variables).
+* To ensure **security** and **consistent behavior** (methods).
+* To **prevent inheritance** where not needed (class).
+
+---
+
+### 🧠 Hinglish Explanation:
+
+> `final` ka matlab hota hai "ab isme koi badlav nahi hoga".
+>
+> * Final variable ki value fix hoti hai.
+> * Final method ko override nahi kar sakte.
+> * Final class ko inherit nahi kar sakte.
+
