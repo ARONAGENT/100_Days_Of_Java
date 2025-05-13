@@ -1,0 +1,63 @@
+### ✅ ASCII vs Unicode in Java
+
+| Feature             | ASCII                                     | Unicode                                     |
+| ------------------- | ----------------------------------------- | ------------------------------------------- |
+| **Used in**         | Older programming languages (C, etc.)     | Java and many modern languages              |
+| **Storage Size**    | 1 byte (8 bits)                           | 2 bytes (16 bits) in Java                   |
+| **Character Range** | 0 to 127 (total 128 characters)           | Supports 65,536 characters (0 to 65535)     |
+| **Supports**        | Only English characters, numbers, symbols | All languages (Hindi, Chinese, emoji, etc.) |
+| **Java uses?**      | ❌ No                                      | ✅ Yes — Unicode                             |
+
+---
+
+### 🧠 Why Java uses Unicode?
+
+> Java was built for **global use** — to support multiple languages (internationalization). ASCII was not enough because it only supports English.
+
+So Java uses **Unicode** which can represent:
+
+* English (A-Z, a-z)
+* Hindi (अ, आ, क...)
+* Chinese (你, 好...)
+* Emojis (😀, ❤️...)
+* Math symbols (∑, √...)
+
+---
+
+### 🔍 Memory Size
+
+In Java:
+
+```java
+char ch = 'A';
+System.out.println((int) ch);  // Output: 65 (Unicode of 'A' = ASCII also)
+
+char hindiChar = 'क';
+System.out.println((int) hindiChar);  // Output: 2325 (Unicode value)
+```
+
+> `char` in Java takes **2 bytes** (16 bits), not 1 byte, to handle a large range of characters.
+
+---
+
+### ✅ Unicode Internals in Java
+
+* Java uses **UTF-16 encoding** by default.
+* Every `char` is **16 bits (2 bytes)**.
+* Unicode values range from `\u0000` to `\uFFFF`.
+
+```java
+char ch = '\u0915';  // Unicode for क
+System.out.println(ch);  // Output: क
+```
+
+---
+
+### 🧠 Hinglish Explanation:
+
+> Purane language jaise C mein characters ko sirf English ke liye banaya gaya tha (ASCII - sirf 1 byte, 128 characters).
+> Java ek **international language** hai — jisme Hindi, Chinese, Emojis, har type ke characters aa sakte hain.
+  Isliye Java **Unicode** use karta hai jo **2 byte** mein store hota hai.
+> Java ka `char` datatype by default **UTF-16 (Unicode)** encoding use karta hai jisme 65536 characters tak store kar sakte ho.
+
+---
