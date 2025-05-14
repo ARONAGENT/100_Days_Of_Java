@@ -1,0 +1,67 @@
+🧠 Topic: Java Reflection using Class Class
+🔷 What is Reflection in Java?
+Reflection is a powerful feature in Java that allows you to:
+Inspect classes, methods, fields, and constructors at runtime
+Create objects and call methods dynamically]
+Access and modify private fields/methods
+All of this is possible using the java.lang.reflect and java.lang.Class APIs.
+
+🔸 What is Class class?
+In Java, every class is internally represented by an object of the Class class.
+You can get this object in 3 ways:
+
+1.Class<?> clazz = Class.forName("MyClass");       // using full class name (package + class)
+2.Class<?> clazz = MyClass.class;                  // using class literal
+3.Class<?> clazz = obj.getClass();                 // using object instance
+
+
+✅ What You Can Do with Class & Reflection
+Task	            Method	                    Description
+Get class name	    getName()	             Returns fully qualified class name
+Get superclass	    getSuperclass()	         Returns parent class
+Get constructors	getConstructors()      	 Lists public constructors
+Create object	    getDeclaredConstructor() Create an object dynamically
+                    .newInstance()
+Get fields (all)	getDeclaredFields()	     Get all fields (public, private)
+Get field value	    field.get(obj)	         Returns value of field for given object
+Get methods	        getDeclaredMethods()	 Get all declared methods (including private)
+
+🔍 Accessing Private Members
+Normally, you can’t access private fields. But reflection allows it using:
+
+field.setAccessible(true); // Bypasses access control
+Then, get the value:
+
+Object value = field.get(obj);
+🧪 Full Reflection Example
+Suppose this is your class:
+
+public class Mango {
+    public int quantity = 5;
+    private String variety = "Alphonso";
+
+    public Mango() {}
+    public void taste() { System.out.println("Sweet!"); }
+}
+Then use reflection to explore it:
+
+Class<?> cls = Class.forName("Basic_Questions.Mango");
+Object obj = cls.getDeclaredConstructor().newInstance();
+
+for (Field f : cls.getDeclaredFields()) {
+    f.setAccessible(true);  // Access private fields
+    System.out.println(f.getName() + " = " + f.get(obj));
+}
+💬 Hinglish Explanation:
+Java mein Class ek special class hai jo kisi bhi class ke structure ko represent karti hai —
+ jaise class ka naam, uske method, constructor, ya fields.
+Agar aapko kisi doosri class ke baare mein run-time par sab kuch dekhna hai, toh aap Reflection ka use karte ho.
+Aap Class.forName("ClassName") se class ka structure laa sakte ho, aur fir uske methods/fields ko dynamically access kar sakte ho — even private members ko bhi setAccessible(true) se access kiya ja sakta hai.
+
+🧠 When to Use Reflection?
+Frameworks (Spring, Hibernate)
+IDEs and Debuggers
+Unit Testing (e.g., JUnit)
+Serialization/Deserialization
+Dynamic proxy or dependency injection
+
