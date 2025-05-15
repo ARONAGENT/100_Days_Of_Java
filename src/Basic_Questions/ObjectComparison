@@ -1,0 +1,87 @@
+✅ Topic: Overriding equals() Method in Java
+🔸 What is equals() in Java?
+The equals() method is defined in the Object class. It is used to compare two objects for equality.
+
+public boolean equals(Object obj)
+By default, it compares memory addresses (reference equality), not the content.
+
+🔍 Why Override equals()?
+In real-world applications, we want to compare the actual contents/fields of two objects,
+ not just whether they point to the same memory.
+
+For example:
+
+Cars car1 = new Cars("BMW", 2020);
+Cars car2 = new Cars("BMW", 2020);
+
+System.out.println(car1 == car2);      // false
+System.out.println(car1.equals(car2)); // false ❌ by default
+To make the second one true, we override equals() in the Cars class to compare brand and year.
+
+🛠️ How to Override equals() Method
+Here’s a proper override:
+
+
+@Override
+public boolean equals(Object obj) {
+    if (this == obj) return true;                     // same reference
+    if (obj == null || getClass() != obj.getClass())  // null or different class
+        return false;
+
+    Cars other = (Cars) obj;                          // safe cast
+    return year == other.year &&                      // compare year
+           Objects.equals(brand, other.brand);        // compare brand (null-safe)
+}
+🔐 Use Objects.equals() instead of brand.equals() for null safety.
+🧠 Hinglish Explanation:
+Java mein agar aap equals() use karte ho bina override kiye, toh wo sirf ye check karega ki dono objects ek hi memory ko point karte hain ya nahi.
+Lekin agar aap chahte ho ki do alag objects ka data same ho toh bhi wo equal maan liye jaaye, toh aapko equals() method ko override karna padega.
+
+🧪 Example Code:
+java
+Copy
+Edit
+package Basic_Questions;
+
+import java.util.Objects;
+
+public class Cars {
+    String brand;
+    int year;
+
+    public Cars(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    public void show() {
+        System.out.println("This is car class: " + brand + " " + year);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Cars other = (Cars) obj;
+        return year == other.year && Objects.equals(brand, other.brand);
+    }
+}
+java
+Copy
+Edit
+public class CarsObject {
+    public static void main(String[] args) {
+        Cars car1 = new Cars("BMW", 2020);
+        Cars car2 = new Cars("BMW", 2020);
+        Cars car3 = new Cars("Audi", 2021);
+
+        System.out.println(car1.equals(car2)); // ✅ true
+        System.out.println(car1.equals(car3)); // ❌ false
+    }
+}
+🔚 Summary:
+Concept	Behavior
+==	Checks if both references point to the same object
+equals()	By default, same as ==. Can be overridden to compare fields/data
+Why override?	To compare object contents (like name, age) instead of memory address
+How?	Use @Override and compare relevant fields manually
