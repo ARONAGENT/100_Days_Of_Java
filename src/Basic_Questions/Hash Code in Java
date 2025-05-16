@@ -1,0 +1,130 @@
+## ✅ What is `hashCode()` in Java?
+
+The `hashCode()` method is a method of the `Object` class in Java:
+
+```java
+public int hashCode()
+```
+
+It returns an **integer value (hash code)** that represents the **memory address (by default)** of the object —
+ but when you override it, it should represent the **object's content**.
+
+---
+
+## 🔍 Why `hashCode()` is important?
+
+Java collections like `HashMap`, `HashSet`, `Hashtable` use `hashCode()` to **find or store objects quickly**.
+If you override `equals()`, you **must also override `hashCode()`** to ensure the object behaves correctly
+in hash-based collections.
+
+---
+
+### 🔁 Contract Between `equals()` and `hashCode()`:
+
+1. **If two objects are equal** (`equals()` returns `true`), then their `hashCode()` **must be equal**.
+2. **If two objects are not equal**, their hash codes **can be same** (hash collision) — but ideally, should be different.
+
+---
+
+## 🛠️ How to Override `hashCode()`:
+
+You can use `Objects.hash()` (Java 7+) for convenience:
+
+```java
+@Override
+public int hashCode() {
+    return Objects.hash(brand, year);
+}
+```
+
+Or use manual hash code logic:
+
+```java
+@Override
+public int hashCode() {
+    int result = brand != null ? brand.hashCode() : 0;
+    result = 31 * result + year;
+    return result;
+}
+----
+## 🧪 Example:
+
+```java
+package Basic_Questions;
+
+import java.util.Objects;
+
+public class Cars {
+    String brand;
+    int year;
+
+    public Cars(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Cars other = (Cars) obj;
+        return year == other.year && Objects.equals(brand, other.brand);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, year);
+    }
+}
+```
+
+And then:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Cars car1 = new Cars("BMW", 2020);
+        Cars car2 = new Cars("BMW", 2020);
+
+        System.out.println(car1.equals(car2));     // true
+        System.out.println(car1.hashCode());       // same hash code
+        System.out.println(car2.hashCode());       // same hash code
+    }
+}
+```
+
+---
+
+## 🧠 Hinglish Explanation:
+
+> `equals()` check karta hai ki **do objects ka data same hai ya nahi**.
+> `hashCode()` ek integer return karta hai jo **object ka unique address** ya **value ka representation** hota hai.
+> Java mein jab aap `equals()` override karte ho, to `hashCode()` bhi override karna padta hai.
+> Nahi to aapke objects `HashMap` ya `HashSet` mein galat behave karenge — same data hone par bhi duplicate samajh sakta hai.
+
+---
+
+### ⚠️ Example of Problem (If you don’t override `hashCode()`):
+
+```java
+HashSet<Cars> set = new HashSet<>();
+set.add(new Cars("BMW", 2020));
+set.add(new Cars("BMW", 2020));
+
+System.out.println(set.size()); // Output will be 2 ❌ (if hashCode not overridden)
+```
+
+✅ But if you override both `equals()` and `hashCode()` properly — size will be 1 ✅
+
+---
+
+## ✅ Summary:
+
+| Method       | Purpose                                            |
+| ------------ | -------------------------------------------------- |
+| `equals()`   | Compares **object contents**                       |
+| `hashCode()` | Returns **int hash value** for fast lookup         |
+| Required?    | Override `hashCode()` if you override `equals()` ✅ |
+
+---
+
