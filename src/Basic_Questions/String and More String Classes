@@ -1,0 +1,75 @@
+Here’s a complete **theory + comparison** of `String` and `StringBuilder` in Java:
+
+---
+
+## ✅ **String vs StringBuilder in Java**
+
+### 🔹 1. **String (Immutable)**
+
+* A `String` in Java is **immutable**, meaning **once created, it cannot be changed**.
+* Any operation that modifies a string (e.g., concatenation) creates a **new object** in memory.
+
+#### 🔧 Example:
+
+```java
+String str = "Hello";
+str = str + " World";  // creates a new String object
+```
+
+> 🔁 Every modification → new object → more memory usage.
+
+---
+
+### 🔹 2. **StringBuilder (Mutable)**
+
+* `StringBuilder` is **mutable**, meaning you can modify the string **without creating a new object**.
+* It's faster for **string manipulation**, especially inside loops.
+
+#### 🔧 Example:
+
+```java
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");  // modifies the original object
+```
+
+> 🔁 Same object is modified → better performance.
+
+---
+
+## 🔄 Comparison Table
+
+| Feature           | String                      | StringBuilder               |
+| ----------------- | --------------------------- | --------------------------- |
+| Mutability        | Immutable                   | Mutable                     |
+| Performance       | Slow (new object on change) | Fast (same object modified) |
+| Thread-Safe?      | ✅ Yes (because immutable)   | ❌ No                        |
+| Memory Efficiency | Less efficient              | More efficient              |
+| Package           | `java.lang`                 | `java.lang`                 |
+| Use Case          | Fixed/unchanging strings    | Frequent modifications      |
+| Method Example    | `concat()`, `substring()`   | `append()`, `insert()`      |
+
+---
+
+## 🧠 Hinglish Explanation
+
+> 🔸 `String` ek **immutable object** hai. Jab bhi usme kuch change karte ho (jaise add ya replace), ek **naya object** ban jaata hai.
+
+> 🔹 `StringBuilder` ek **mutable object** hai, jo ek hi object me changes allow karta hai. Isliye **performance ke liye best** hai jab aapko string ko baar-baar change karna ho.
+
+---
+
+## ✅ Use Case Summary
+
+| When to Use                           | Use Class       |
+| ------------------------------------- | --------------- |
+| Small, constant text                  | `String`        |
+| Dynamic, loop-based string operations | `StringBuilder` |
+
+---
+
+🧠 String vs StringBuilder (Quick Recap)
+Feature	                    String	                                    StringBuilder
+Mutable                 	❌ No	                                    ✅ Yes
+Thread-safe	                ❌ No	                                    ❌ No (Use StringBuffer if needed)
+Performance	                Slower (new object created on every change)	Faster (same object modified)
+Use Case	                When text is constant or rarely changes	    When text is modified frequently
