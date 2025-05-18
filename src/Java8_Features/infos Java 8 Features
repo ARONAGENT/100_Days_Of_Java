@@ -1,0 +1,155 @@
+Java 8 introduced **major features** that changed how Java is written and used,
+especially in terms of **functional programming**, **stream processing**, and **API improvements**.
+Here's a clear explanation of each important feature:
+
+## ✅ Java 8 Features (Explained One-by-One)
+
+---
+
+### 1️⃣ **Lambda Expressions**
+
+* **Definition**: Short way to write anonymous methods/functions.
+* **Purpose**: To enable functional-style programming and reduce boilerplate code.
+
+```java
+// Without Lambda
+Runnable r1 = new Runnable() {
+    public void run() {
+        System.out.println("Running");
+    }
+};
+
+// With Lambda
+Runnable r2 = () -> System.out.println("Running");
+```
+
+---
+
+### 2️⃣ **Functional Interfaces**
+
+* **Definition**: Interface with only one abstract method.
+* **Annotation**: `@FunctionalInterface`
+* **Common Examples**: `Runnable`, `Comparable`, `Predicate<T>`, `Function<T,R>`
+
+```java
+@FunctionalInterface
+interface MyFunctionalInterface {
+    void show();
+}
+```
+
+---
+
+### 3️⃣ **Default Methods in Interface**
+
+* **Definition**: Methods with implementation inside interfaces using `default` keyword.
+* **Why?**: To allow interface evolution without breaking existing implementations.
+
+```java
+interface Vehicle {
+    default void start() {
+        System.out.println("Vehicle started");
+    }
+}
+```
+
+---
+
+### 4️⃣ **Streams API**
+
+* **Definition**: Process collections in a functional way (like filtering, mapping, reducing).
+* **Advantage**: Efficient, readable, supports parallel processing.
+
+```java
+List<String> names = Arrays.asList("Ram", "Shyam", "Mohan");
+names.stream()
+     .filter(name -> name.startsWith("S"))
+     .forEach(System.out::println);
+```
+
+---
+
+### 5️⃣ **Optional Class**
+
+* **Definition**: A container that may or may not contain a value. Used to avoid `NullPointerException`.
+
+```java
+Optional<String> name = Optional.ofNullable("Java");
+name.ifPresent(System.out::println);  // prints Java
+```
+
+---
+
+### 6️⃣ **Method References**
+
+* **Definition**: A shorthand notation of lambda expressions to call a method.
+* **Syntax**: `ClassName::methodName`
+
+```java
+List<String> names = Arrays.asList("A", "B", "C");
+names.forEach(System.out::println);
+```
+
+---
+
+### 7️⃣ **Constructor References**
+
+* **Definition**: Reference to a constructor using `ClassName::new`
+
+```java
+Supplier<List<String>> listSupplier = ArrayList::new;
+```
+
+---
+
+### 8️⃣ **Date and Time API (java.time)**
+
+* **New API**: `LocalDate`, `LocalTime`, `LocalDateTime`, `Period`, `Duration`, `ZoneId`
+* **Why?**: Old `Date` and `Calendar` classes were confusing and not thread-safe.
+
+```java
+LocalDate date = LocalDate.now();
+LocalDate birth = LocalDate.of(2000, 5, 15);
+System.out.println(Period.between(birth, date).getYears()); // age
+```
+
+---
+
+### 9️⃣ **Nashorn JavaScript Engine**
+
+* **Definition**: Run JavaScript code inside Java using `ScriptEngineManager`.
+* **Note**: Removed in later Java versions.
+
+```java
+ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+engine.eval("print('Hello from JS')");
+```
+
+---
+
+### 🔟 **Collectors API**
+
+* **Definition**: Part of `java.util.stream`, used to collect results from stream operations.
+
+```java
+List<String> names = Arrays.asList("John", "Jane", "Jack");
+String joined = names.stream().collect(Collectors.joining(", "));
+System.out.println(joined); // John, Jane, Jack
+```
+
+---
+
+## 🔚 Summary Table:
+
+| Feature               | Purpose                                 |
+| --------------------- | --------------------------------------- |
+| Lambda Expressions    | Shorter code for functional-style logic |
+| Functional Interfaces | Enable lambda usage                     |
+| Default Methods       | Interface method with default body      |
+| Stream API            | Data processing pipelines               |
+| Optional Class        | Avoid null checks                       |
+| Method References     | Cleaner lambda syntax                   |
+| Date/Time API         | Modern, thread-safe date handling       |
+| Collectors API        | Used with Streams to gather results     |
+
+---
