@@ -1,0 +1,81 @@
+### ✅ **What is a Functional Interface in Java?**
+
+A **Functional Interface** is an **interface that contains exactly one abstract method**.
+It may have **default** or **static methods**, but only **one abstract method** is allowed.
+
+---
+
+### ✅ Why is it called “Functional”?
+
+Because it is intended to represent **a single functionality** or **function**, just like in functional programming.
+Java 8 introduced **lambda expressions**, which are used to implement functional interfaces in a clean and concise way.
+
+---
+
+### ✅ How to Define a Functional Interface
+
+You can use the **`@FunctionalInterface`** annotation (optional but recommended) to tell the compiler that the interface must have **only one abstract method**.
+
+```java
+@FunctionalInterface
+interface Greeting {
+    void sayHello(String name); // only one abstract method allowed
+}
+```
+
+If you try to add a second abstract method, the compiler will throw an error.
+
+---
+
+### ✅ Functional Interface with Anonymous Class vs Lambda
+
+#### 🔸 Using Anonymous Class:
+
+```java
+Greeting g = new Greeting() {
+    @Override
+    public void sayHello(String name) {
+        System.out.println("Hello, " + name);
+    }
+};
+g.sayHello("Rohan");
+```
+
+#### 🔸 Using Lambda Expression:
+
+```java
+Greeting g = (name) -> System.out.println("Hello, " + name);
+g.sayHello("Rohan");
+```
+
+---
+
+### ✅ Built-in Functional Interfaces in `java.util.function` Package
+
+Java provides many pre-defined functional interfaces, like:
+
+| Interface       | Method              | Description                     |
+| --------------- | ------------------- | ------------------------------- |
+| `Function<T,R>` | `R apply(T t)`      | Takes T input, returns R output |
+| `Predicate<T>`  | `boolean test(T t)` | Checks a condition              |
+| `Consumer<T>`   | `void accept(T t)`  | Consumes input, returns nothing |
+| `Supplier<T>`   | `T get()`           | Supplies output, takes nothing  |
+
+---
+
+### 🧠 Hinglish Explanation:
+
+> Functional Interface ek aisa interface hota hai jisme sirf ek hi abstract method hota hai.
+> Iska use hum mostly **lambda expression** ke sath karte hain clean aur short syntax likhne ke liye.
+
+---
+
+### ✅ Summary Points:
+
+* Interface with one abstract method = Functional Interface.
+* Use `@FunctionalInterface` for compiler checks.
+* Can be implemented using Anonymous class or Lambda.
+* Java provides many built-in functional interfaces.
+* It is compulsory having a one abstract method in @functionalInterface interface ....
+
+---
