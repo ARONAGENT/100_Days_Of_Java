@@ -1,0 +1,36 @@
+✅ Day 23 Topic: Method References in Java 8
+🔹 What is it?
+Method Reference is a shorthand notation of a lambda expression to call a method.
+It helps make your code more readable and cleaner.
+
+🔧 Types of Method References:
+Syntax	Description
+ClassName::staticMethod	Reference to a static method
+object::instanceMethod	Reference to an instance method
+ClassName::new	Reference to a constructor
+
+🧪 Example:
+java
+Copy
+Edit
+import java.util.Arrays;
+import java.util.List;
+
+public class MethodReferenceExample {
+    public static void printItem(String s) {
+        System.out.println(s);
+    }
+
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Ravi", "Sita", "Geeta");
+
+        // Using lambda
+        names.forEach(name -> printItem(name));
+
+        // Using method reference
+        names.forEach(MethodReferenceExample::printItem);
+    }
+}
+🧠 Hinglish Explanation:
+Jab lambda ka kaam sirf ek method call karna hota hai,
+toh usse chhota aur clean banane ke liye method reference use karte hain.
