@@ -1,0 +1,83 @@
+✅ 1. What are the types of method references in Java 8? Give examples.
+👉 There are 4 types of method references:
+Type	Syntax	Example
+1️⃣ Reference to a static method	ClassName::staticMethodName	Math::max
+2️⃣ Reference to an instance method of a particular object	object::instanceMethodName	System.out::println
+3️⃣ Reference to an instance method of an arbitrary object of a particular type	ClassName::instanceMethodName	String::toLowerCase
+4️⃣ Reference to a constructor	ClassName::new	ArrayList::new
+
+✅ 2. How is String::toLowerCase different from str -> str.toLowerCase()?
+Both are functionally same, but:
+
+str -> str.toLowerCase() is explicit lambda expression
+
+String::toLowerCase is method reference, used when lambda body is just calling a method
+
+It improves readability and conciseness.
+
+✅ 3. Can method references be used with functional interfaces only?
+Yes.
+Method reference works only when the target type is a functional interface, because it needs a single abstract method (SAM) to match.
+
+✅ 4. Explain a real-world scenario where method reference makes code more readable.
+Instead of:
+
+java
+Copy
+Edit
+list.forEach(str -> System.out.println(str));
+You can write:
+
+java
+Copy
+Edit
+list.forEach(System.out::println);
+➡️ Cleaner, more readable, and avoids unnecessary lambda boilerplate.
+
+✅ 5. Can method references be overloaded methods?
+Yes — Java compiler uses type inference to pick the right overloaded method that matches the functional interface.
+
+Example:
+
+java
+Copy
+Edit
+class Demo {
+    public static void print(String s) {}
+    public static void print(Integer i) {}
+}
+If used as:
+
+java
+Copy
+Edit
+Consumer<String> c = Demo::print; // Chooses print(String)
+➡️ Compiler resolves based on functional interface signature.
+
+✅ 6. Can constructor reference be used to create arrays?
+Yes!
+
+java
+Copy
+Edit
+Function<Integer, int[]> arrayCreator = int[]::new;
+int[] arr = arrayCreator.apply(5);
+➡️ Creates an int array of size 5.
+
+✅ Bonus: Practice Code Challenge
+java
+Copy
+Edit
+import java.util.Arrays;
+import java.util.List;
+
+public class MethodRefChallenge {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("rohan", "amit", "sita", "gita");
+
+        // 1. Convert all to uppercase using method reference
+        names.stream()
+             .map(String::toUpperCase)
+             .forEach(System.out::println);
+    }
+}
