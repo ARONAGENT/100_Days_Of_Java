@@ -1,0 +1,66 @@
+### ✅ **When `finally` Block Does *Not* Execute**
+
+Here are the main cases:
+
+---
+
+### 1️⃣ **If `System.exit()` is called before `finally`**
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        try {
+            System.out.println("Inside try");
+            System.exit(0); // Forcefully exits JVM
+        } finally {
+            System.out.println("Inside finally"); // ❌ Won’t be executed
+        }
+    }
+}
+```
+
+---
+
+### 2️⃣ **If JVM crashes due to a fatal error (e.g., `StackOverflowError`, `OutOfMemoryError`)**
+
+```java
+public class CrashDemo {
+    public static void recursive() {
+        recursive(); // StackOverflowError
+    }
+
+    public static void main(String[] args) {
+        try {
+            recursive();
+        } finally {
+            System.out.println("Inside finally"); // ❌ May not be executed if JVM crashes
+        }
+    }
+}
+```
+
+---
+
+### 3️⃣ **If the thread is killed or interrupted forcibly during execution**
+
+If a thread running the `try-finally` block is forcibly terminated (e.g., via `Thread.stop()`), the `finally` block may be skipped.
+
+---
+
+### 4️⃣ **If power failure or hardware shutdown happens**
+
+Clearly not under program control, but in real life, these can prevent the `finally` block from being executed.
+
+---
+
+### ✅ Summary
+
+| Case                   | Will `finally` run? |
+| ---------------------- | ------------------- |
+| Normal execution       | ✅ Yes               |
+| Exception thrown       | ✅ Yes               |
+| Return in try/catch    | ✅ Yes               |
+| `System.exit(0)`       | ❌ No                |
+| JVM crash              | ❌ No                |
+| Thread killed abruptly | ❌ No                |
+
