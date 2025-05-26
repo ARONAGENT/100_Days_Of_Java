@@ -1,0 +1,115 @@
+## 🔁 Enhanced `switch` in Java
+
+### ✅ What is Enhanced Switch?
+
+Java's **traditional `switch` statement** had some limitations:
+
+* Required `break` to avoid fall-through.
+* Verbose and error-prone.
+* Couldn’t return values directly.
+
+**Enhanced `switch`**, introduced in Java 12 (preview) and made standard in **Java 14**, improves this by:
+
+* Allowing **arrow (`->`) syntax**.
+* Supporting **multiple case labels**.
+* Enabling **`switch` expressions** to return values.
+* Making the code cleaner, safer, and more readable.
+
+---
+
+### 🧠 Syntax Comparison
+
+#### 🧓 Old-style Switch (Statement)
+
+```java
+String day = "MONDAY";
+switch (day) {
+    case "MONDAY":
+        System.out.println("Start of work week");
+        break;
+    case "FRIDAY":
+        System.out.println("End of work week");
+        break;
+    default:
+        System.out.println("Midweek day");
+}
+```
+
+#### 🚀 Enhanced Switch (Expression)
+
+```java
+String day = "MONDAY";
+switch (day) {
+    case "MONDAY" -> System.out.println("Start of work week");
+    case "FRIDAY" -> System.out.println("End of work week");
+    default -> System.out.println("Midweek day");
+}
+```
+
+#### 🎯 Switch Expression with Value Return
+
+```java
+String day = "MONDAY";
+
+String result = switch (day) {
+    case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY" -> "Weekday";
+    case "FRIDAY" -> "Friday vibes!";
+    case "SATURDAY", "SUNDAY" -> "Weekend!";
+    default -> throw new IllegalStateException("Invalid day: " + day);
+};
+
+System.out.println(result);
+```
+
+---
+
+### 💡 Benefits of Enhanced Switch
+
+| Feature                           | Benefit                               |
+| --------------------------------- | ------------------------------------- |
+| Arrow (`->`) syntax               | Cleaner, no `break` needed            |
+| Multiple case labels              | Group values in a single line         |
+| Return values directly            | Assign result to a variable           |
+| Exhaustiveness check (for enums)  | Compile-time safety for all cases     |
+| Pattern matching support (future) | Prepares switch for powerful upgrades |
+
+---
+
+### 📌 Example: Grade Evaluator
+
+```java
+public class EnhancedSwitchExample {
+    public static void main(String[] args) {
+        char grade = 'B';
+
+        String result = switch (grade) {
+            case 'A' -> "Excellent";
+            case 'B' -> "Good";
+            case 'C' -> "Average";
+            case 'D' -> "Below Average";
+            case 'F' -> "Fail";
+            default -> "Invalid Grade";
+        };
+
+        System.out.println("Result: " + result);
+    }
+}
+```
+
+---
+
+### 🛑 Notes
+
+* `->` syntax doesn't allow fall-through. Each case is self-contained.
+* You can use `yield` if you want to return values from blocks (like if you need multiple lines).
+
+```java
+String type = switch (day) {
+    case "MONDAY" -> {
+        System.out.println("Calculating...");
+        yield "Workday";
+    }
+    default -> "Unknown";
+};
+```
+
