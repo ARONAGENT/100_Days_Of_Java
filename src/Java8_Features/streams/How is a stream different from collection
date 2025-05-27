@@ -1,0 +1,63 @@
+### ✅ Java Streams vs Collections — Detailed Theory and Example (Day 27)
+### 📘 **Theory: Java Streams vs Collections**
+
+| Feature            | Collections                                                                     | Streams                                                                           |
+| ------------------ | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Definition**     | A collection is a group of objects stored in memory (like `List`, `Set`, etc.). | A stream is a sequence of elements supporting sequential and parallel operations. |
+| **Storage**        | Collections store data.                                                         | Streams do not store data; they perform computation on data.                      |
+| **Nature**         | Eager (data is fetched immediately).                                            | Lazy (data is computed when needed).                                              |
+| **Usage**          | Used for storing, accessing, and modifying data.                                | Used for filtering, mapping, reducing, etc.                                       |
+| **Modification**   | Supports element modification (add, remove).                                    | Streams are mostly read-only.                                                     |
+| **Traversal**      | Can be traversed multiple times (e.g., via loops).                              | Can be traversed only once.                                                       |
+| **Parallelism**    | Manual thread handling needed.                                                  | Built-in support via `parallelStream()`.                                          |
+| **API Introduced** | Introduced in Java 1.2                                                          | Introduced in Java 8                                                              |
+
+---
+
+### 📌 When to Use?
+
+* **Use Collections**: When you need to store and modify data.
+* **Use Streams**: When you need to perform operations like filtering, mapping, or aggregation.
+
+---
+
+### 💡 Example Program: Stream vs Collection
+
+```java
+import java.util.*;
+import java.util.stream.*;
+
+public class StreamVsCollectionDemo {
+    public static void main(String[] args) {
+        // Creating a list of integers (Collection)
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+        // Traditional Collection-based approach (Imperative Style)
+        List<Integer> evenNumbers = new ArrayList<>();
+        for (Integer number : numbers) {
+            if (number % 2 == 0) {
+                evenNumbers.add(number);
+            }
+        }
+        System.out.println("Even numbers using Collection: " + evenNumbers);
+
+        // Using Stream API (Functional Style)
+        List<Integer> evenWithStream = numbers.stream()
+                                              .filter(n -> n % 2 == 0)
+                                              .collect(Collectors.toList());
+        System.out.println("Even numbers using Stream: " + evenWithStream);
+    }
+}
+```
+
+---
+
+### ⚙️ Output:
+
+```
+Even numbers using Collection: [2, 4, 6]
+Even numbers using Stream: [2, 4, 6]
+```
+
+---
+
