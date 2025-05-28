@@ -1,0 +1,70 @@
+## ✅ Day 28 Topic: **Immutable Class in Java**
+
+### 💡 Why this?
+
+* It’s an **interview favorite** (asked even in beginner-level rounds)
+* Related to concepts like `final`, encapsulation, and object safety
+* Gives insight into how **String** is immutable in Java
+
+---
+
+### 🔍 What is an Immutable Class?
+
+An **immutable class** is a class whose objects **cannot be modified** once created.
+
+### 🧠 Key Rules to Create an Immutable Class:
+
+1. Declare the class as `final` (so it can't be extended).
+2. Make all fields `private` and `final`.
+3. Don’t provide setters.
+4. Initialize values only via constructor.
+5. If a field is mutable (like a list), return a copy in the getter.
+
+---
+
+### ✅ Interview-Focused Example:
+
+```java
+// Immutable Student class
+final class Student {
+    private final int id;
+    private final String name;
+
+    // Constructor initializes fields
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // Only getters, no setters
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+```
+
+### 🔄 Test the Immutability:
+
+```java
+public class ImmutableTest {
+    public static void main(String[] args) {
+        Student student = new Student(101, "Rohan");
+        System.out.println(student.getId());     // 101
+        System.out.println(student.getName());   // Rohan
+
+        // student.name = "NotAllowed"; // ❌ Compile-time error
+    }
+}
+```
+
+---
+
+### 💬 Common Interview Question:
+
+> **Q. Can you make a class immutable in Java? Why would you want to?**
+> A. Yes. Immutable classes help in thread safety, caching, and creating predictable, bug-free code. The `String` class is a prime example.
+
