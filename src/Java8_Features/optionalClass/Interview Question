@@ -1,0 +1,99 @@
+### ✅ **1. What is `Optional` in Java? Why is it used?**
+
+**Answer:**
+`Optional` is a container class introduced in Java 8 to handle `null` values in a more functional and elegant way. It helps avoid `NullPointerException` and encourages developers to think explicitly about the possibility of absence of a value.
+
+---
+
+### ✅ **2. Difference between `Optional.of()` and `Optional.ofNullable()`?**
+
+**Answer:**
+
+| Method                  | Behavior                                                                     |
+| ----------------------- | ---------------------------------------------------------------------------- |
+| `Optional.of()`         | Throws `NullPointerException` if the value is `null`.                        |
+| `Optional.ofNullable()` | Allows `null` values and returns an empty `Optional` if the value is `null`. |
+
+---
+
+### ✅ **3. How is `Optional` better than `null` checks?**
+
+**Answer:**
+
+* Avoids manual null checks.
+* Makes code more readable and safe.
+* Promotes functional programming style using `map`, `filter`, etc.
+
+---
+
+### ✅ **4. What is the use of `isPresent()` and `ifPresent()` in `Optional`?**
+
+**Answer:**
+
+* `isPresent()` checks whether a value is present or not.
+* `ifPresent()` executes a lambda expression only if a value is present.
+
+```java
+Optional<String> name = Optional.of("Rohan");
+name.ifPresent(n -> System.out.println("Hello " + n));
+```
+
+---
+
+### ✅ **5. What is the difference between `orElse()`, `orElseGet()`, and `orElseThrow()`?**
+
+**Answer:**
+
+| Method          | Purpose                             | When Called                                   |
+| --------------- | ----------------------------------- | --------------------------------------------- |
+| `orElse()`      | Returns value or fallback           | Always calls fallback (even if value present) |
+| `orElseGet()`   | Returns value or uses Supplier      | Calls Supplier only if value is absent        |
+| `orElseThrow()` | Throws exception if value is absent |                                               |
+
+Example:
+
+```java
+Optional<String> opt = Optional.empty();
+String result = opt.orElse("Default"); // returns "Default"
+```
+
+---
+
+### ✅ **6. Can you use `Optional` in method parameters or class fields?**
+
+**Answer:**
+It is **not recommended** to use `Optional` as method parameters or fields. It’s designed for return types only, to indicate that a value might not be present.
+
+---
+
+### ✅ **7. How do you convert `Optional<String>` to uppercase safely?**
+
+**Answer:**
+
+```java
+Optional<String> opt = Optional.of("hello");
+String result = opt.map(String::toUpperCase).orElse("default");
+System.out.println(result); // HELLO
+```
+
+---
+
+### ✅ **8. How does `Optional` improve readability in streams?**
+
+**Answer:**
+Instead of:
+
+```java
+if (list != null && !list.isEmpty()) {
+    return list.get(0);
+}
+```
+
+You can write:
+
+```java
+return list.stream().findFirst().orElse("default");
+```
+
+---
+
