@@ -1,0 +1,98 @@
+### 🔹 **1. What is the `java.time` package in Java 8?**
+
+**Answer:**
+`java.time` is a new date and time API introduced in Java 8 to overcome the flaws of `java.util.Date` and `java.util.Calendar`. It is immutable, thread-safe, and provides better operations for manipulating dates and times.
+
+---
+
+### 🔹 **2. What are the main classes in `java.time`?**
+
+**Answer:**
+
+* `LocalDate` – Date without time (e.g., 2025-06-03)
+* `LocalTime` – Time without date (e.g., 14:30:00)
+* `LocalDateTime` – Both date and time (e.g., 2025-06-03T14:30)
+* `ZonedDateTime` – Date and time with timezone
+* `Period` – For date-based amounts (e.g., 2 years, 3 days)
+* `Duration` – For time-based amounts (e.g., 5 hours)
+* `DateTimeFormatter` – For formatting and parsing dates
+
+---
+
+### 🔹 **3. How is `LocalDate` different from `Date`?**
+
+**Answer:**
+
+* `LocalDate` is **immutable and thread-safe**, unlike `Date`.
+* `LocalDate` has built-in methods like `plusDays()`, `minusMonths()`, `isAfter()`, which are clearer and safer.
+
+---
+
+### 🔹 **4. What is the purpose of `Period` and `Duration` classes?**
+
+**Answer:**
+
+* `Period` is used to calculate the difference between **two dates**.
+* `Duration` is used to calculate the difference between **two times** or **timestamps**.
+
+---
+
+### 🔹 **5. How do you format a date using `DateTimeFormatter`?**
+
+**Example:**
+
+```java
+LocalDate date = LocalDate.now();
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+String formattedDate = date.format(formatter);
+```
+
+---
+
+### 🔹 **6. What is the difference between `parse()` and `format()` in `DateTimeFormatter`?**
+
+**Answer:**
+
+* `parse()` converts a `String` to `LocalDate/Time`.
+* `format()` converts a `LocalDate/Time` to `String`.
+
+---
+
+### 🔹 **7. How do you get the current date and time in Java 8?**
+
+```java
+LocalDate date = LocalDate.now();
+LocalTime time = LocalTime.now();
+LocalDateTime dateTime = LocalDateTime.now();
+```
+
+---
+
+### 🔹 **8. What is `ZonedDateTime`? When is it used?**
+
+**Answer:**
+`ZonedDateTime` represents a complete date-time with a time zone. It's useful in **global applications** where you need to handle multiple time zones.
+
+---
+
+### 🔹 **9. How can you calculate age using `Period`?**
+
+```java
+LocalDate birthDate = LocalDate.of(2000, 6, 1);
+LocalDate today = LocalDate.now();
+Period age = Period.between(birthDate, today);
+System.out.println("Age: " + age.getYears());
+```
+
+---
+
+### 🔹 **10. What are the advantages of `java.time` API over the old Date API?**
+
+**Answer:**
+
+* Immutable and thread-safe
+* Clear and easy-to-use methods
+* Better design with clear separation (date, time, duration, period)
+* Time zone support with `ZoneId` and `ZonedDateTime`
+
+---
