@@ -2,7 +2,7 @@ package dsa_Questions;
 
 public class FindDuplicateItems {
     public static void main(String[] args) {
-        int[] arr = {3, 1, 4, 2, 5, 3};
+        int[] arr = {3, 1, 4, 2, 5, 3,5,};
 
         boolean found = false;
 
@@ -11,10 +11,8 @@ public class FindDuplicateItems {
                 if (arr[i] == arr[j]) {
                     System.out.println("Duplicate element found: " + arr[i]);
                     found = true;
-                    break;
                 }
             }
-            if (found) break;
         }
 
         if (!found) {
