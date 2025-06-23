@@ -1,0 +1,49 @@
+✅ Day 54 Topic: Deep Copy vs Shallow Copy in Java (Especially in Arrays & Objects)
+
+🔍 Why important?
+Critical for interview questions, especially when handling objects/arrays
+Prevents unexpected bugs in DSA & real-world code
+Helps understand object reference behavior, very useful in recursive or backtracking problems
+
+🔁 Difference Table:
+Feature	Shallow         Copy	                    Deep Copy
+What it does	        Copies references	        Copies actual data
+Affects original	    Yes (if mutable)	        No
+Used in	                Default object assignments	Manual cloning or defensive copy
+
+🧠 Hinglish Summary:
+Shallow copy mein sirf reference copy hota hai, to dono variable same memory ko point karte hain.
+Deep copy mein naya object banta hai, jisse original safe rehta hai.
+Interviews mein kaafi puchte hain — especially objects ke sath.
+
+
+🧩 Line:
+int[] deep = java.util.Arrays.copyOf(original, original.length);
+🔍 Question:
+Array to copy ho hi raha hai… fir original.length dene ki kya zarurat?
+
+✅ Java ka Arrays.copyOf() ka kaam:
+public static int[] copyOf(int[] original, int newLength)
+Ye method new array banata hai jiski length aap specify karte ho (newLength).
+
+Fir original array ke elements new array me copy karta hai, jitne allowed hai.
+
+🧠 Example samjho:
+int[] arr = {10, 20, 30};
+int[] copy = Arrays.copyOf(arr, 5);
+➡️ copy will be: {10, 20, 30, 0, 0}
+
+Pehle 3 elements copy ho gaye
+
+Baaki 2 elements default 0 se fill ho gaye
+
+✅ So, jab tum likhte ho:
+int[] deep = Arrays.copyOf(original, original.length);
+🟢 You're saying:
+
+"Mujhe original ke jitni hi length ka ek naya array chahiye, aur usme poore elements copy kar do."
+
+Isliye length dena zaroori hai — taaki Java samjhe kitne elements copy karne hain aur kitni badi array banani hai.
+
+🚀 Tip:
+Agar aap original se chhoti ya badi copy chahte ho, toh length accordingly adjust kar sakte ho.
