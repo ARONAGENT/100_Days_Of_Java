@@ -1,3 +1,7 @@
+package Basic_Questions;
+
+import Basic_Questions.Student;
+
 import java.util.*;
 
 public class ComparatorDemo {
@@ -10,12 +14,12 @@ public class ComparatorDemo {
 
         // 🔸 Using Comparable (by id)
         List<Student> list1 = new ArrayList<>(students);
-        Collections.sort(list1);
+//        Collections.sort(list1);
         System.out.println("Sorted by ID: " + list1);
 
         // 🔸 Using Comparator (by name)
         List<Student> list2 = new ArrayList<>(students);
-        list2.sort(Comparator.comparing(student -> student.name));
+        list2.sort(Comparator.comparing(student -> student.getName()));
         System.out.println("Sorted by Name: " + list2);
     }
 }
