@@ -1,0 +1,44 @@
+🔁 Day 59: Learn Deque in Java (ArrayDeque vs LinkedList) – Implement Stack and Queue with Deque
+🔹 Why this?
+Deque (Double-Ended Queue) is a powerful data structure used in many problems like sliding window maximum, palindromes, and LRU cache. Java provides ArrayDeque which is faster than Stack/LinkedList in many cases.
+
+☑️ What to cover in Day 59:
+Introduction to Deque
+
+What is Deque?
+Operations: addFirst(), addLast(), pollFirst(), pollLast(), etc.
+
+ArrayDeque vs LinkedList as Deque
+Performance differences
+
+When to use which?
+Implement Stack using Deque
+
+LIFO behavior using addFirst() and removeFirst()
+Implement Queue using Deque
+
+FIFO behavior using addLast() and removeFirst()
+Real-world use case or problem (Optional):
+
+Try solving "Sliding Window Maximum" (Leetcode #239)
+
+
+
+Operation	    Description (English)	                                Hinglish Explanation
+addFirst(E e)	Adds element e to the front (head) of the deque.	    Front seat pe bitha diya banda. Starting point pe element ko insert karta hai.
+addLast(E e)	Adds element e to the end (tail) of the deque.	        Last seat pe bitha diya. Queue ke end mein element add karta hai.
+pollFirst() 	Removes and returns the first element of the deque.
+                Returns null if empty.	Pehle aaya, pehle gaya.         Front wale element ko hata deta hai.
+pollLast()	    Removes and returns the last element of the deque.      Queue ke end se element hata deta hai — jaise last passenger utar gaya.
+                Returns null if empty.
+peekFirst()	    Returns the first element without removing it.	        Front seat pe kaun hai dekh lete hai — bina hataaye.
+peekLast()	    Returns the last element without removing it.	        Last seat pe kaun baitha hai, bas dekhne ke liye.
+
+
+push(E e)	Inserts element e at the front of the deque                 Jaise ek plate ka stack — naya plate upar chadha diya.
+            (like stack’s push).
+pop()	Removes and returns the first element (like stack’s pop).       Upar wala plate utha liya — jo sabse last mein aaya tha, wahi pehle gaya.
+        Returns exception if empty.
+
+
+⚠️ Note: pop() agar queue empty ho toh exception throw karta hai, jabki pollFirst() sirf null return karta hai — yaani zyada safe hai poll.
