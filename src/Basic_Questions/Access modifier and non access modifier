@@ -1,0 +1,44 @@
+🔐 Access Modifiers in Java
+Control the visibility (scope) of classes, methods, and variables.
+
+Modifier	Class	Package	Subclass	World
+private	✅	❌	❌	❌
+default (no keyword)	✅	✅	❌	❌
+protected	✅	✅	✅	❌
+public	✅	✅	✅	✅
+
+✅ Examples:
+java
+Copy
+Edit
+public class Demo {
+    private int a = 10;       // Accessible only inside this class
+    int b = 20;               // default – accessible in same package
+    protected int c = 30;     // accessible in package + subclass
+    public int d = 40;        // accessible everywhere
+}
+🧱 Non-Access Modifiers in Java
+Define behavioral properties like finality, concurrency, or memory behavior.
+
+🔸 List of Common Non-Access Modifiers:
+Modifier	Used With	Description
+static	variables, methods	Belongs to class, not object
+final	class, method, variable	Cannot be modified or overridden
+abstract	class, method	Must be implemented by subclass
+synchronized	method/block	Thread-safe execution
+volatile	variables	Value is always read from main memory
+transient	variables (serialization)	Skips during serialization
+native	method	Written in native code (C/C++)
+strictfp	class, method	Enforces IEEE floating-point precision
+
+✅ Examples:
+java
+Copy
+Edit
+public final class ConstantClass {
+    public static final double PI = 3.1415;
+
+    public synchronized void printSafe() {
+        // Thread-safe method
+    }
+}
