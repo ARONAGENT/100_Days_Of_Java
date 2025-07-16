@@ -1,0 +1,156 @@
+### **Java Static, Constructor, and Class Behavior Quiz – Questions**
+
+1. Can static methods access instance variables?
+   A. Yes B. No C. Only protected D. Only final
+
+2. Which keyword refers to current object?
+   A. self B. super C. this D. instance
+
+3. Can constructors be overloaded?
+   A. Yes B. No C. Only static constructors D. Only if return type differs
+
+4. Which block executes first when class is loaded?
+   A. Constructor B. Main C. Static block D. Instance block
+
+5. Can static blocks have return statements?
+   A. Yes B. No C. Only in final classes D. Only if void
+
+6. What is constructor overloading?
+   A. Same name, different return type B. Same name, different parameters
+   C. Different name, same parameters D. Different name, different class
+
+7. What is the use of static keyword?
+   A. To create class B. To define instance C. To share data among objects D. To define packages
+
+8. Which constructor is provided automatically by compiler?
+   A. Copy constructor B. Default constructor C. Static constructor D. Private constructor
+
+9. What happens if no constructor is defined?
+   A. Compile error B. Default constructor added C. Program crashes D. Object can’t be created
+
+10. What is static method?
+    A. Object specific B. Belongs to class C. Used for constructor D. Can override object
+
+11. Which keyword creates a constant value?
+    A. const B. final C. static D. fixed
+
+12. What is an object in Java?
+    A. Class B. Instance of class C. Variable D. Function
+
+13. When is a constructor called?
+    A. When object is deleted B. When class is loaded
+    C. When object is created D. After main method
+
+14. Can a class have both static and instance methods?
+    A. Yes B. No C. Only static D. Only final
+
+15. What is the purpose of static block?
+    A. Initialize static data B. Create object C. Call main D. Terminate program
+
+16. Can we use this() and super() together in constructor?
+    A. Yes B. No C. Only in main D. Only in static
+
+17. How many static blocks can be defined in a class?
+    A. 1 B. 2 C. Any number D. None
+
+18. What does finalize() method do?
+    A. Creates object B. Garbage collection hint C. Free memory D. Throws exception
+
+19. How do you create an object in Java?
+    A. object o = new() B. new Object(); C. create object() D. Object.create()
+
+20. Can static method access static variable?
+    A. Yes B. No C. Only through object D. Only inside constructor
+
+21. Which keyword is used to define a class in Java?
+    A. define B. struct C. class D. object
+
+22. What is correct way to access static variable?
+    A. object.x B. class.x C. this.x D. super.x
+
+23. What is constructor chaining?
+    A. Calling class from constructor B. Calling another constructor using this()
+    C. Overriding constructor D. Static method call from constructor
+
+24. Which keyword prevents inheritance?
+    A. abstract B. final C. static D. default
+
+25. Which block runs first in Java class execution?
+    A. Constructor B. Main C. Static block D. Method
+
+26. What is the use of this() in constructor?
+    A. Calls superclass B. Calls another constructor C. Ends constructor D. Defines static
+
+27. Can constructors be static?
+    A. Yes B. No C. Only in inner classes D. Only if final
+
+28. Which keyword is used to call superclass constructor?
+    A. this B. super C. base D. parent
+
+29. Which method is called before object is destroyed?
+    A. finalize() B. delete() C. destroy() D. nullify()
+
+30. Can constructor return value?
+    A. Yes B. No C. Only void D. Only object
+
+31. How are static methods called?
+    A. Using object B. Using this C. Using class name D. Using new keyword
+
+32. What is the name of a constructor?
+    A. Any name B. Same as class C. Object D. Init
+
+33. Which variable requires an object to access?
+    A. Static B. Global C. Local D. Instance
+
+34. Can constructor be abstract?
+    A. Yes B. No C. Only protected D. Only default
+
+35. What does the new keyword do?
+    A. Deletes object B. Allocates memory C. Returns null D. Calls method
+
+36. Can static methods be overridden?
+    A. Yes B. No C. Only final methods D. Only in interface
+
+37. Which memory area holds static variables?
+    A. Heap B. Stack C. Method area D. Code cache
+
+38. What is the return type of a constructor?
+    A. void B. int C. None D. It has no return type
+
+39. Can we declare constructor private?
+    A. Yes B. No C. Only static D. Only in child class
+
+40. What is output of `static int x = 10; System.out.println(x);`
+    A. 0 B. 10 C. Compile error D. Runtime error
+
+41. Which keyword is used to declare a static variable?
+    A. const B. final C. static D. global
+
+42. What is a default constructor?
+    A. With parameters B. With no parameters C. Static method D. Private constructor
+
+43. Can static variables be accessed using object?
+    A. Yes B. No C. Only in static context D. Only in final class
+
+44. How many constructors can a class have?
+    A. Only one B. Two C. Any number D. None
+
+45. What is the default value of an object reference?
+    A. 0 B. null C. undefined D. void
+
+46. Which constructor is used to create object with values?
+    A. Default B. Parameterized C. Copy D. Static
+
+47. Can we declare main method static?
+    A. Yes B. No C. Only final D. Only in public class
+
+48. Which modifier is not allowed for constructor?
+    A. public B. private C. static D. protected
+
+49. How to call constructor explicitly?
+    A. Using new keyword B. Using super() C. Using init() D. Using class name
+
+50. Which method cannot access "this"?
+    A. Instance method B. Constructor C. Static method D. All methods
+
+---

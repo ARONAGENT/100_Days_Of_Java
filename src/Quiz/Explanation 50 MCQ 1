@@ -1,0 +1,53 @@
+
+**Answers with Explanation:**
+
+1. **B. No** – Static methods can't access instance variables directly as they don’t belong to an object.
+2. **C. this** – The `this` keyword refers to the current class instance.
+3. **A. Yes** – Constructors can be overloaded with different parameter lists.
+4. **C. Static block** – Static blocks execute first when the class is loaded into memory.
+5. **B. No** – Static blocks can’t return values.
+6. **B. Same name, different parameters** – Constructor overloading uses different parameter sets.
+7. **C. To share data among objects** – Static allows sharing data at class level.
+8. **B. Default constructor** – Compiler provides a default no-arg constructor automatically.
+9. **B. Default constructor added** – If no constructor is defined, a default one is provided.
+10. **B. Belongs to class** – Static methods are class-level methods.
+11. **B. final** – The `final` keyword makes a variable constant.
+12. **B. Instance of class** – An object is a runtime instance of a class.
+13. **C. When object is created** – Constructors are invoked during object creation.
+14. **A. Yes** – A class can have both static and instance methods.
+15. **A. Initialize static data** – Static blocks are used to initialize static variables.
+16. **B. No** – `this()` and `super()` cannot be used together as they must be the first statement.
+17. **C. Any number** – A class can have multiple static blocks.
+18. **B. Garbage collection hint** – `finalize()` is called before garbage collection.
+19. **B. new Object();** – Object creation in Java is done using `new` keyword.
+20. **A. Yes** – Static methods can access other static variables or methods.
+21. **C. class** – Java classes are declared using the `class` keyword.
+22. **B. class.x** – Static variables are accessed via class name.
+23. **B. Calling another constructor using this()** – Constructor chaining uses `this()`.
+24. **B. final** – The `final` keyword prevents inheritance.
+25. **C. Static block** – Static blocks run before everything else when class loads.
+26. **B. Calls another constructor** – `this()` invokes another constructor in the same class.
+27. **B. No** – Constructors cannot be static in Java.
+28. **B. super** – `super()` is used to call superclass constructor.
+29. **A. finalize()** – This method is invoked before garbage collection.
+30. **B. No** – Constructors don't return values.
+31. **C. Using class name** – Static methods are accessed using class name.
+32. **B. Same as class** – Constructor must match the class name.
+33. **D. Instance** – Instance variables require an object to access.
+34. **B. No** – Constructors cannot be abstract.
+35. **B. Allocates memory** – The `new` keyword allocates memory for objects.
+36. **B. No** – Static methods are not overridden; they are hidden.
+37. **C. Method area** – Static variables are stored in method area.
+38. **D. It has no return type** – Constructors don’t have a return type.
+39. **A. Yes** – Constructors can be private (e.g., in Singleton pattern).
+40. **B. 10** – The output is 10, the value of static variable x.
+41. **C. static** – The `static` keyword is used to declare static variables.
+42. **B. With no parameters** – A default constructor has no parameters.
+43. **A. Yes** – Static variables can be accessed via objects (though not recommended).
+44. **C. Any number** – Java allows multiple constructors (constructor overloading).
+45. **B. null** – Default value of object reference is `null`.
+46. **B. Parameterized** – Used to initialize object with specific values.
+47. **A. Yes** – `main` method must be static to run without creating an object.
+48. **C. static** – Constructors can’t be declared `static`.
+49. **A. Using new keyword** – Constructors are called via `new` keyword.
+50. **C. Static method** – Static methods can’t use `this` as they don't belong to any instance.
