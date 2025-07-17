@@ -1,0 +1,40 @@
+💾 Java Concept: Serialization & transient keyword
+📦 What is Serialization?
+Serialization is the process of converting a Java object into a byte stream, so it can be:
+
+Saved to a file
+
+Transferred over a network
+
+Stored in a database
+
+✅ Use Case:
+When saving object state (e.g., user session, game data)
+
+In distributed systems (e.g., sending objects between microservices)
+
+🔐 What is transient keyword?
+Use transient to exclude a variable from being serialized.
+
+🔍 Why use it?
+Sensitive data (e.g., passwords)
+
+Temporary or derived fields that don’t need saving
+
+📌 Example:
+java
+Copy
+Edit
+import java.io.*;
+
+class User implements Serializable {
+    String name;
+    transient String password;  // Will not be serialized
+
+    User(String name, String password) {
+        this.name = name;
+        this.password = password;
+    }
+}
+After serialization, password will be null on deserialization.
+
