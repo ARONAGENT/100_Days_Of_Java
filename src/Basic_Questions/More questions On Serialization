@@ -1,0 +1,66 @@
+🎯 Top Interview Questions
+Question	Answer
+Q1. What is the role of Serializable interface?	It's a marker interface that enables serialization.
+Q2. What happens if a class does not implement Serializable?	NotSerializableException is thrown.
+Q3. What is the use of transient?	Prevents a variable from being serialized (e.g., passwords).
+Q4. Can static variables be serialized?	No, because static variables belong to the class, not the object.
+Q5. What is serialVersionUID?	It's a version ID used during deserialization to verify class compatibility.
+Q6. What is Externalizable?	Interface that gives full control over serialization by overriding methods.
+Q7. Can constructors run during deserialization?	No, constructors are not called during deserialization.
+
+
+
+
+✅ Day 70: Serialization in Java – Interview-Style Notes
+🔸 What is Serialization in Java?
+Serialization is the process of converting a Java object into a byte stream, so it can be:
+
+Saved to a file
+
+Sent over a network
+
+Stored in memory (e.g., caching)
+
+🔹 Key Interface
+java
+Copy
+Edit
+public interface Serializable
+Marker interface (no methods)
+
+🔹 Why use Serialization?
+Save object state (persistence)
+
+Send objects over socket/network (RMI, Web)
+
+Store in cache or session (e.g., in Spring/Servlets)
+
+🔹 How to serialize a class?
+java
+Copy
+Edit
+import java.io.*;
+
+class Student implements Serializable {
+    int id;
+    String name;
+
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+Then write:
+
+java
+Copy
+Edit
+ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("obj.ser"));
+out.writeObject(new Student(1, "Rohan"));
+🔹 What is transient keyword?
+If a variable is marked transient, it will not be saved during serialization.
+
+java
+Copy
+Edit
+transient String password; // will be skipped when serialized
