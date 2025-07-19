@@ -1,0 +1,28 @@
+🔍 Interview Questions
+Question	Answer
+Q1. What is Externalizable?	A Java interface allowing manual control over object serialization.
+Q2. Is no-arg constructor required?	Yes, it's mandatory and gets called during deserialization.
+Q3. When would you prefer Externalizable over Serializable?	When you want full control and better performance.
+Q4. Does it skip transient/static fields like Serializable?	You can choose what to write/read, including/excluding anything manually.
+
+🧠 Difference: Serializable vs Externalizable
+Feature	Serializable	Externalizable
+Control	Default serialization	Manual control
+Methods to override	None	writeExternal() & readExternal()
+Performance	Slower	Faster (custom control)
+Constructors	Not called	No-arg constructor must be present and is called
+
+
+✅ Day 71: Externalizable in Java (Advanced Serialization Control)
+🔹 What is Externalizable?
+Externalizable is an interface that gives you complete control over the serialization and deserialization process.
+
+It extends Serializable, but requires you to manually override two methods:
+
+java
+Copy
+Edit
+public interface Externalizable extends Serializable {
+    void writeExternal(ObjectOutput out) throws IOException;
+    void readExternal(ObjectInput in) throws IOException, ClassNotFoundException;
+}
