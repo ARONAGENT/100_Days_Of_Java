@@ -1,0 +1,60 @@
+✅ Checked Exceptions
+Definition:
+Checked exceptions are exceptions that are checked at compile time.
+If you don’t handle them (with try-catch or throws), the compiler will give an error.
+
+Examples:
+
+IOException
+
+SQLException
+
+FileNotFoundException
+
+Usage:
+Used when there's a possibility of external failure (file not found, database connection issue, etc.).
+
+Example:
+
+java
+Copy
+Edit
+import java.io.*;
+
+public class CheckedExample {
+    public static void main(String[] args) throws IOException {
+        FileReader fr = new FileReader("file.txt");  // Checked exception
+    }
+}
+✅ Unchecked Exceptions
+Definition:
+Unchecked exceptions are not checked at compile time.
+They occur at runtime, and the compiler doesn’t force you to handle them.
+
+Examples:
+
+ArithmeticException
+
+NullPointerException
+
+ArrayIndexOutOfBoundsException
+
+Usage:
+Usually caused by logic errors or bad input in your code.
+
+Example:
+
+java
+Copy
+Edit
+public class UncheckedExample {
+    public static void main(String[] args) {
+        int x = 10 / 0;  // Unchecked exception: ArithmeticException
+    }
+}
+✅ Key Differences
+Feature	Checked Exception	Unchecked Exception
+Checked at	Compile time	Runtime
+Handling Required	Yes (must handle or declare)	No (optional handling)
+Inherits from	Exception class	RuntimeException class
+Examples	IOException, SQLException	NullPointerException, ArithmeticException
