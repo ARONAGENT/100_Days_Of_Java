@@ -1,0 +1,32 @@
+✅ Day 75: Interface vs Abstract Class in Java — Key Differences & Interview Questions
+| Feature              | Interface                                                                      | Abstract Class                            |
+| -------------------- | ------------------------------------------------------------------------------ | ----------------------------------------- |
+| Methods              | All methods are abstract (Java 7)<br>Can have default/static methods (Java 8+) | Can have abstract and concrete methods    |
+| Variables            | `public static final` only                                                     | Any type (with any access modifier)       |
+| Multiple Inheritance | Supports (via implementation)                                                  | Does not support multiple inheritance     |
+| Constructor          | No                                                                             | Yes                                       |
+| Access Modifiers     | Only `public`                                                                  | Can use all (`public`, `protected`, etc.) |
+| Purpose              | 100% abstraction                                                               | Partial abstraction                       |
+
+
+💡 Top Interview Questions: Interface vs Abstract Class
+Can an interface have a constructor in Java? Why or why not?
+→ No, because interfaces cannot be instantiated.
+
+Why would you use an abstract class over an interface?
+→ When you need base functionality (common methods) along with abstract ones.
+
+Can an abstract class implement an interface?
+→ Yes, and it can leave implementation of some or all interface methods to its subclasses.
+
+Can a class implement multiple interfaces? Can it extend multiple abstract classes?
+→ A class can implement multiple interfaces but can only extend one abstract class (due to single inheritance in Java).
+
+What happens if two interfaces have methods with the same signature?
+→ The implementing class just provides one implementation; there’s no conflict.
+
+How is multiple inheritance solved using interfaces in Java?
+→ Java avoids the diamond problem because interfaces don’t carry state.
+
+Can abstract classes have final, static, or private methods?
+→ Yes. But abstract methods cannot be final or private.
