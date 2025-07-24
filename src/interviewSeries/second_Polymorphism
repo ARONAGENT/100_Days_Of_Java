@@ -1,0 +1,47 @@
+Absolutely! Here's your **Day 76: Java Interview Question Set** focused on **Polymorphism** — a very commonly asked OOP topic.
+
+---
+
+## ✅ **Day 76: Java Polymorphism — Interview Questions**
+
+---
+
+### 🔹 **Brief Concept Overview**
+
+**Polymorphism** means "many forms" — in Java, it allows objects to behave differently based on the context.
+There are two types:
+
+1. **Compile-time Polymorphism** (Method Overloading)
+2. **Runtime Polymorphism** (Method Overriding)
+
+---
+
+### 💡 **Top Interview Questions on Polymorphism**
+
+1. **What is polymorphism in Java?**
+   → It’s the ability of an object to take many forms — typically seen in method overriding and overloading.
+
+2. **What’s the difference between method overloading and method overriding?**
+
+   * **Overloading**: Same method name, different parameters (compile-time).
+   * **Overriding**: Same method signature in subclass (runtime).
+
+3. **Can you override a static method in Java?**
+   → No. Static methods are bound at compile-time (they belong to the class, not instance).
+
+4. **What is dynamic method dispatch?**
+   → It’s the mechanism by which a call to an overridden method is resolved at runtime.
+
+5. **Can a private method be overridden?**
+   → No. Private methods are not inherited, so they can't be overridden.
+
+6. **How is polymorphism achieved in Java?**
+   → Through method overriding (runtime) and method overloading (compile-time).
+
+7. **What is covariant return type in polymorphism?**
+   → When an overridden method returns a subtype of the return type declared in the parent class.
+
+8. **Can constructors be polymorphic?**
+   → No. Constructors are not inherited, so they can't be overridden.
+
+---
