@@ -1,0 +1,43 @@
+Great! Here's your **Day 77 Java Interview Question Set** on **Encapsulation** — another core OOPs concept frequently asked in interviews.
+
+---
+
+## ✅ **Day 77: Java Encapsulation – Interview Questions**
+
+---
+
+### 🔹 **Brief Concept Overview**
+
+**Encapsulation** is the process of **wrapping data (variables) and code (methods)** together as a single unit (class) and **restricting direct access** to some of the object’s components — typically by making fields `private` and providing public `getters/setters`.
+
+---
+
+### 💡 **Top Interview Questions on Encapsulation**
+
+1. **What is encapsulation in Java?**
+   → It is binding the data and methods into a single unit and restricting access to it using access modifiers.
+
+2. **Why is encapsulation important?**
+   → It provides data hiding, improves security, makes the code maintainable and flexible.
+
+3. **How do you achieve encapsulation in Java?**
+   → By:
+
+   * Declaring fields as `private`
+   * Providing `public` getter and setter methods
+
+4. **Can you give a real-life example of encapsulation?**
+   → A class representing a `BankAccount` that hides balance and allows access only via deposit/withdraw methods.
+
+5. **What is the difference between encapsulation and abstraction?**
+
+   * **Encapsulation**: Hides data (implementation details) via access modifiers.
+   * **Abstraction**: Hides complexity by exposing only essential behavior via interfaces or abstract classes.
+
+6. **Is it possible to achieve encapsulation without getters and setters?**
+   → Technically yes, using access control, but using getters/setters is the standard way.
+
+7. **What happens if you make fields `public`?**
+   → You break encapsulation because data is exposed directly and cannot be controlled or validated.
+
+---
