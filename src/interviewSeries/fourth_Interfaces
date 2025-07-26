@@ -1,0 +1,33 @@
+🔹 📌 Short Conceptual Answer
+Yes, an interface can extend another interface in Java using the extends keyword — not implements.
+One interface extends another interface.
+
+A class implements an interface.
+💬 Interview Questions on Interface Inheritance
+Can an interface inherit another interface?
+→ Yes, using the extends keyword.
+
+How many interfaces can be extended by a single interface?
+→ Multiple. Java supports multiple inheritance in interfaces.
+
+java
+Copy
+Edit
+interface A {}
+interface B {}
+interface C extends A, B {} // valid
+What is the difference between extends and implements in Java?
+→
+
+extends is used when a class or interface inherits from another class or interface.
+
+implements is used when a class implements an interface.
+
+Can an interface implement another interface?
+→ ❌ No, interfaces can only extend interfaces, not implement them.
+
+Why does Java allow multiple interface inheritance but not class inheritance?
+→ To avoid diamond problem and maintain flexibility, Java allows classes to implement multiple interfaces but not extend multiple classes.
+
+Can an abstract class implement an interface?
+→ ✅ Yes, and it can choose to leave some methods unimplemented.
