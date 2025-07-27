@@ -1,0 +1,15 @@
+💬 Interview Questions
+Why were default methods introduced in Java 8?
+→ To provide method implementations in interfaces without breaking existing classes.
+
+How do default methods differ from abstract methods?
+→ Default methods have a body; abstract methods do not.
+
+Can interfaces have static methods?
+→ Yes, static methods can be called using the interface name.
+
+Can static methods in interfaces be overridden?
+→ ❌ No. Static methods are not inherited by implementing classes.
+
+What happens if two interfaces have the same default method?
+→ You must override it in the implementing class to resolve ambiguity.
