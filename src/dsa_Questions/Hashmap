@@ -1,0 +1,35 @@
+✅ Core Concepts
+What is HashMap?
+
+How it stores data using hashing (hashCode() and equals())
+
+🛠️ Common Methods
+put(K key, V value)
+get(Object key)
+remove(Object key)
+containsKey(Object key), containsValue(Object value)
+keySet(), values(), entrySet()
+putIfAbsent(), replace(), computeIfAbsent() etc.
+
+🔁 Iteration Techniques
+Using entrySet() with for-each
+Using keySet() and get()
+Iterator with Map.Entry<K, V>
+
+⚙️ Synchronized vs Non-Synchronized
+HashMap is not synchronized.
+Use Collections.synchronizedMap(map) for thread safety.
+Or use ConcurrentHashMap in multithreading scenarios.
+
+💡 Use Cases
+Caching
+Counting frequencies
+Storing key-value config (e.g., environment variables)
+Indexing by ID or name
+
+🔒 Important Notes
+Keys must be unique
+Allows null key and values
+Not thread-safe by default
+Load factor and resizing affect performance
+
