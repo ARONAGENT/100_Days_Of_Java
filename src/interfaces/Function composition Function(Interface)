@@ -1,0 +1,16 @@
+Function composition means combining two or more functions so that the output of one function becomes the input of the next.
+In Java (from Java 8), the java.util.function.Function<T, R> interface provides two key methods for composition:
+
+1. compose(Function before)
+Used when you want to apply the second function first, then the current one.
+
+Think of it as: f.compose(g).apply(x) → means f(g(x)).
+
+2. andThen(Function after)
+Used when you want to apply the current function first, then the second one.
+
+Think of it as: f.andThen(g).apply(x) → means g(f(x)).
+
+3. identity()
+Returns a function that returns its input: Function.identity().apply(x) → returns x.
+
