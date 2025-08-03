@@ -1,0 +1,54 @@
+🧠 What is an Enum in Java?
+An enum (short for enumeration) is a special Java type used to define a set of named constants.
+
+java
+Copy
+Edit
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY
+}
+✅ Key Features of Enum
+Enums are final, type-safe, and singleton instances.
+Can have fields, constructors, and methods.
+Cannot extend another class (since it extends java.lang.Enum).
+Often used in switch statements and state management.
+
+✅ Common Methods in Enum
+Method	Use
+values()	Returns all enum constants
+valueOf(String)	Converts string to enum constant
+ordinal()	Position of constant in enum (0-based)
+name()	Returns the name of enum constant
+
+✅ Real-World Use Cases:
+HTTP Status Codes
+User Roles (ADMIN, USER, MODERATOR)
+Order Status (PLACED, SHIPPED, DELIVERED)
+Error handling
+
+
+✅ Enum kya hota hai?
+Java mein enum ka use hum fixed set of constant values define karne ke liye karte hain.
+
+🔧 Real-Life Analogy:
+Socho ek pizza shop hai — usme sirf 3 size available hai: SMALL, MEDIUM, LARGE.
+
+Agar koi customer "extra large" bole, toh wo invalid hai.
+
+👉 To aise limited options ko restrict karne ke liye hum enum ka use karte hain.
+
+✅ Why Use Enum? — Simple Explanation
+✅ Type safety milta hai
+enum ensure karta hai ki sirf allowed values hi use ho.
+
+✅ Code readable hota hai
+Size.LARGE likhna zyada readable hai compare to "L" ya 3
+
+✅ Switch-case mein perfect fit
+Easy hota hai conditions likhna without errors
+
+✅ Avoids magic strings/integers
+Hard-coded "admin", "user" ki jagah Role.ADMIN likhna better hai.
+
+🧠 Summary Line in Hinglish:
+Jab bhi aapko fixed aur limited options chahiye program mein (jaise days, sizes, roles), tab enum perfect solution hota hai. Yeh galat input se bhi bachaata hai aur code ko clean banata hai.
