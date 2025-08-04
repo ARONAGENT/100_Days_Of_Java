@@ -1,0 +1,25 @@
+🔍 What is EnumSet?
+EnumSet is a specialized Set implementation for use with enum types only.
+It is highly efficient, compact, and faster than HashSet for enums.
+
+✅ Why Use EnumSet?
+Works only with enums — type-safe.
+
+Faster than other Set implementations (internally uses a bit-vector).
+
+No null values allowed → avoids NullPointerException.
+
+All elements must be of a single enum type.
+
+📦 Common Factory Methods
+Method	Description
+EnumSet.allOf(Enum.class)	Includes all enum constants
+EnumSet.noneOf(Enum.class)	Empty set of enum type
+EnumSet.of(E1, E2, ...)	Creates a set with given enums
+EnumSet.range(E1, E2)	All enums in a given range
+EnumSet.complementOf(set)	Opposite of a given EnumSet
+
+🔐 When to Use EnumSet?
+When you’re dealing with enum-based flags or modes
+For high-performance operations with a fixed set of constants
+When readability + type safety are a priority
