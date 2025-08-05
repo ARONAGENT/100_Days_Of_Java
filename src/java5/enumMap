@@ -1,0 +1,20 @@
+🔍 What is EnumMap?
+EnumMap<K extends Enum<K>, V> is a Map implementation for enum keys.
+It is faster and more efficient than HashMap when keys are enums.
+
+✅ Why Use EnumMap?
+
+| Feature                     | Benefit                           |
+| --------------------------- | --------------------------------- |
+| Only works with enum as key | Type-safe and predictable         |
+| Internally uses an array    | Very **fast lookup & iteration**  |
+| Maintains key order         | In the order enums are declared   |
+| Compact & memory efficient  | Better than HashMap for enum keys |
+
+✅ Common Methods
+All standard Map methods like:
+put()
+get()
+containsKey()
+keySet()
+entrySet()
