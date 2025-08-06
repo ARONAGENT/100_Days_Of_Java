@@ -1,0 +1,23 @@
+🧠 What is Left Shift?
+The left shift operator (<<) shifts all bits in a number to the left by a specified number of positions.
+Each shift to the left multiplies the number by 2.
+
+🔍 How it Works (Binary Explanation)
+Let’s take a = 5, which is:
+
+Binary: 0000 0101
+When you do a << 1:
+
+Becomes: 0000 1010 → which is 10
+So, 5 << 1 = 10
+
+Similarly:
+
+5 << 2 = 20 (5 × 2 × 2)
+3 << 3 = 24 (3 × 8)
+
+
+💡 When to Use Left Shift
+For fast multiplication by powers of 2
+In bitmasking or low-level optimizations
+
