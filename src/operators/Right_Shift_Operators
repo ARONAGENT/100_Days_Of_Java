@@ -1,0 +1,62 @@
+✅ Day 90 – Java Right Shift Operator (>>)
+🔹 What is Right Shift Operator?
+The right shift operator (>>) shifts the bits of a number to the right by the specified number of positions.
+Each right shift divides the number by 2, dropping the rightmost bits.
+
+📌 Syntax:
+java
+Copy
+Edit
+int result = number >> positions;
+💡 Important Notes:
+Sign bit (leftmost bit) is preserved → so it works correctly with negative numbers.
+Equivalent to integer division by 2ⁿ (n = shift count).
+
+Fills leftmost bits with the sign bit (0 for positive, 1 for negative).
+⚖️ Right Shift vs Unsigned Right Shift
+Operator	Sign Propagation	Fills with
+>>	Yes	Sign Bit
+>>>	No	0 (zero)
+
+✅ Use Cases:
+Efficient integer division by powers of 2.
+Working with binary data (e.g., compression, encryption).
+Preserving sign while shifting.
+
+Comparision Between >> and <<
+No, sign bit preservation is not applicable in left shift (<<).
+Let’s break it down in simple terms:
+
+✅ Right Shift (>>) – Sign bit is preserved
+This means if the number is negative, the leftmost bit (sign bit) stays 1.
+
+This helps to keep the number negative after the shift.
+
+Example:
+
+java
+Copy
+Edit
+int x = -8;
+System.out.println(x >> 1);  // Output: -4
+→ -8 is represented in binary as: 11111111 11111111 11111111 11111000
+→ After >> 1: 11111111 11111111 11111111 11111100 (which is -4)
+
+❌ Left Shift (<<) – Sign bit is not preserved
+It just shifts all bits to the left, and inserts 0 at the right.
+
+If the leftmost bit becomes 1 after the shift, the number becomes negative (in signed integers).
+
+So left shifting a positive number can turn it into negative.
+
+Example:
+
+java
+Copy
+Edit
+int x = 1000000000; // positive
+System.out.println(x << 1);  // May become negative
+| Operator | Sign Bit Preserved? | Safe for Negative Numbers? |
+| -------- | ------------------- | -------------------------- |
+| `>>`     | ✅ Yes               | ✅ Yes                      |
+| `<<`     | ❌ No                | ❌ No                       |
