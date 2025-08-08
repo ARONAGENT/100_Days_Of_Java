@@ -1,0 +1,19 @@
+✅ What is Sign Bit? (in Hindi + English)
+🧠 English:
+In Java (and most languages), integers are stored in binary format using 2’s complement.
+The leftmost bit (also called MSB – Most Significant Bit) is called the sign bit:
+
+0 → Positive number
+1 → Negative number
+
+🧠 Hindi (Simple):
+Java mein koi bhi number binary form mein store hota hai. Sabse aage ka bit (leftmost bit) hota hai sign bit.
+Agar 0 hai, toh number positive hai.
+Agar 1 hai, toh number negative hai.
+
+🔁 Left Shift (<<) vs Right Shift (>>)
+
+| Operator           | Use           | Sign Bit        | What it does                                  |
+| ------------------ | ------------- | --------------- | --------------------------------------------- |
+| `<<` (Left Shift)  | Multiply by 2 | ❌ Not preserved | Bits move left, fills 0 on right              |
+| `>>` (Right Shift) | Divide by 2   | ✅ Preserved     | Bits move right, fills sign bit (0/1) on left |
