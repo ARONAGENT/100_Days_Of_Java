@@ -1,0 +1,25 @@
+1. Understanding Bitwise AND (&)
+Definition: The bitwise AND operator compares each bit of two numbers
+and sets the corresponding bit in the result to 1 if both bits are 1; otherwise, it sets it to 0.
+
+Operation: Works on binary representation.
+Example:
+a = 6 →  0110
+b = 5 →  0101
+a & b → 0100 (4 in decimal)
+
+2. General Rules
+1 & 1 = 1
+1 & 0 = 0
+0 & 1 = 0
+0 & 0 = 0
+
+5. Key Observations
+If one number is 0, result is always 0.
+
+If both numbers are same, result is the same number.
+Bitwise AND can be used for:
+Masking (filtering specific bits)
+Checking if a bit is set
+Efficient modulo with powers of 2
+Low-level optimizations
