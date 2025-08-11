@@ -1,0 +1,44 @@
+
+
+// Bitwise OR: 1 if either bit is 1, else 0.
+        // Truth Table:
+        // 0 | 0 = 0
+        // 0 | 1 = 1
+        // 1 | 0 = 1
+        // 1 | 1 = 1
+
+xplanation
+Bitwise OR (|) checks each bit of the two numbers:
+If either bit is 1 → result bit is 1.
+If both bits are 0 → result bit is 0.
+It’s often used in:
+Setting specific bits to 1 in a number.
+
+Combining flags in low-level programming.
+1️⃣ How to convert decimal to binary (step-by-step)
+Rule:
+Keep dividing the number by 2, writing the remainder each time.
+The binary is the remainders read from bottom to top.
+
+Example: 100
+100 ÷ 2 = 50 remainder 0
+50 ÷ 2 = 25 remainder 0
+25 ÷ 2 = 12 remainder 1
+12 ÷ 2 = 6 remainder 0
+6 ÷ 2 = 3 remainder 0
+3 ÷ 2 = 1 remainder 1
+1 ÷ 2 = 0 remainder 1
+Now, read bottom to top → 1100100
+
+✅ 100 in binary = 1100100
+
+
+3️⃣ Convert result back to decimal
+Binary 1110110 → Decimal:
+
+(1×64) + (1×32) + (1×16) + (0×8) + (1×4) + (1×2) + (0×1)
+= 64 + 32 + 16 + 0 + 4 + 2 + 0
+= 118
+
+💡 Final:
+100 | 50 = 118
