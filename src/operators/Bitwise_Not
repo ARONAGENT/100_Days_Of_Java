@@ -1,0 +1,25 @@
+1️⃣ Theory
+Type: Unary bitwise operator (works on a single operand)
+Symbol: ~
+
+Function: Flips each bit:
+1 becomes 0
+0 becomes 1
+
+Important: In Java, integers are stored in two’s complement form
+So ~x is mathematically equal to:
+
+| Input bit | Output bit |
+| --------- | ---------- |
+| 0         | 1          |
+| 1         | 0          |
+
+
+6️⃣ Quick Facts
+Works on byte, short, int, long
+Always flips all bits, including the sign bit
+Can be used for:
+Inverting bitmasks
+Simple data obfuscation
+Logical toggling at bit level
+
