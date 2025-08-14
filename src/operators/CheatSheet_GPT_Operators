@@ -1,0 +1,52 @@
+📝 Bitwise Operators in Java — Quick Reference
+1. Bitwise AND (&)
+
+Sets bit to 1 only if both bits are 1
+System.out.println(5 & 3); // 1  (0101 & 0011 = 0001)
+
+2. Bitwise OR (|)
+
+Sets bit to 1 if any bit is 1
+System.out.println(5 | 3); // 7  (0101 | 0011 = 0111)
+
+3. Bitwise XOR (^)
+
+Sets bit to 1 if bits are different
+System.out.println(5 ^ 3); // 6  (0101 ^ 0011 = 0110)
+
+4. Bitwise NOT (~)
+
+Flips all bits → ~x = -x - 1
+System.out.println(~5); // -6
+
+5. Left Shift (<<)
+
+Moves bits to left, fills right with 0
+Each shift is multiply by 2
+System.out.println(5 << 1); // 10
+
+6. Right Shift (>>)
+
+Moves bits to right, keeps sign bit
+Each shift is divide by 2
+System.out.println(10 >> 1); // 5
+
+7. Unsigned Right Shift (>>>)
+
+Moves bits to right, fills left with 0
+Works differently for negative numbers
+System.out.println(-5 >>> 1); // Big positive number
+
+| Operator | Meaning              | Example    | Result         |     |
+| -------- | -------------------- | ---------- | -------------- | --- |
+| `&`      | AND                  | `5 & 3`    | `1`            |     |
+| `\|`     | OR                   | \`5        | 3\`            | `7` |
+| `^`      | XOR                  | `5 ^ 3`    | `6`            |     |
+| `~`      | NOT                  | `~5`       | `-6`           |     |
+| `<<`     | Left Shift           | `5 << 1`   | `10`           |     |
+| `>>`     | Right Shift          | `10 >> 1`  | `5`            |     |
+| `>>>`    | Unsigned Right Shift | `-5 >>> 1` | large positive |     |
+
+
+
+
