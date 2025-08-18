@@ -1,0 +1,35 @@
+🔹 Brute Force Approach
+Idea: Try all possible subarrays, calculate their sum, and keep track of the maximum.
+
+Steps:
+Start from each index i.
+For each j ≥ i, compute sum of subarray arr[i..j].
+Update maximum sum.
+
+Time Complexity:
+
+O(n²) if you keep a running sum,
+O(n³) if you recompute every subarray sum.
+
+Simple but very slow for large arrays.
+
+🔹 Kadane’s Algorithm
+Idea: Dynamic Programming → Build solution in O(n).
+Steps:
+
+Keep two variables:
+curr_sum = best sum ending at current index
+max_sum = best sum found so far
+
+For each element:
+curr_sum = max(arr[i], curr_sum + arr[i])
+max_sum = max(max_sum, curr_sum)
+Return max_sum.
+
+Time Complexity: O(n).
+Efficient and works even for large inputs.
+
+👉 In short:
+
+Brute Force = try all → slow (O(n²) / O(n³))
+Kadane’s = keep running sum smartly → fast (O(n))
