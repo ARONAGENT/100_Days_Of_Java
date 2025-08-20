@@ -1,0 +1,36 @@
+📌 Day 98: Java Generics
+🔹 What are Generics?
+
+Generics in Java allow you to write type-safe and reusable code by enabling classes,
+interfaces, and methods to operate on objects of various types while providing compile-time type checking.
+
+👉 Without generics, you would use Object type and then cast manually (risk of runtime errors).
+
+🔹 Benefits of Generics
+
+Type Safety – Prevents ClassCastException.
+Code Reusability – Works with any object type.
+Compile-time Checking – Errors caught early.
+Eliminates Casting – No need to explicitly cast objects.
+
+
+🚀 Java Generics with Methods
+
+Generics in Java allow you to write reusable code that works with different data types without casting.
+
+✅ Syntax of a Generic Method:
+public <T> void printData(T data) {
+    System.out.println(data);
+}
+<T> → Type parameter (can be anything: T, E, K, V, etc.)
+T data → Method can accept any type.
+printData(10) → Integer
+printData("Hello") → String
+
+🔑 Key Points:
+
+Generic methods are type-safe.
+They reduce code duplication.
+extends Comparable<T> is used for bounds (restrict type to comparable objects).
+
+
