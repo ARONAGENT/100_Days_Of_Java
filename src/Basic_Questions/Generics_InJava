@@ -34,3 +34,21 @@ They reduce code duplication.
 extends Comparable<T> is used for bounds (restrict type to comparable objects).
 
 
+
+🔹 What are Wildcards in Generics?
+
+In Java Generics, the wildcard ? represents an unknown type.
+It’s useful when you don’t know in advance what type a collection will hold, but still want to write flexible code.
+
+🔹 Types of Wildcards
+Unbounded Wildcard <?>
+Accepts any type.
+Example: List<?> → list of unknown objects.
+
+Upper Bounded Wildcard <? extends T>
+Accepts type T or its subclasses.
+Example: List<? extends Number> → can hold Integer, Double, etc.
+
+Lower Bounded Wildcard <? super T>
+Accepts type T or its superclasses.
+Example: List<? super Integer> → can hold Integer, Number, Object.
