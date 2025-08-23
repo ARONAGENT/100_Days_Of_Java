@@ -1,0 +1,225 @@
+📘 Java Learning Journey – 100 Days 🚀
+🔹 OOP Concepts & Core Java
+
+🏗️ Day 6 – Static vs Instance variables (detailed examples, memory behavior)
+🏗️ Day 5 – Memory allocation of static vs instance variables + JVM memory areas
+🏗️ Day 10 – Static, instance, and local variables with memory allocation & defaults
+🧱 Day 9 – Instance Initializer Block (IIB), execution order & constructor difference
+⚡ Day 8 – Static block in Java, executes before main()
+🔑 Day 12 – Final keyword → variable, method, class
+🧩 Day 11 – Class vs class object, runtime reflection basics
+📦 Day 4 – Wrapper classes, autoboxing/unboxing with collections
+🔍 Day 15 – Custom equals() for value comparison
+✨ Day 16 – equals() vs hashCode() (correct implementation)
+🧠 Day 76 – Polymorphism (Overloading vs Overriding)
+🔐 Day 77 – Encapsulation with Interview Qs
+🧠 Day 75 – Interface vs Abstract Class
+🧩 Day 78 – Interface Inheritance (can interfaces extend each other?)
+💡 Day 79 – Java 8 Interface Enhancements (default & static methods)
+🎭 Day 73 – Abstract class inheritance
+🏛️ Day 86 – Java Enum (analogy, switch, version info)
+🏛️ Day 87 – EnumSet (use cases, factory methods)
+🏛️ Day 88 – EnumMap (enum-based key-value mapping)
+
+🔹 Strings & Numbers
+
+✨ Day 17 – String vs StringBuilder (performance comparison)
+🔢 Day 7 – BigInteger vs BigDecimal (precision handling.
+🔢 Day 65 – Java Math class (abs, max, min, pow, sqrt, etc.)
+🔤 Day 13 – Unicode in Java (escape sequences, printing hex/decimal)
+🔡 Day 45 – Character frequency counter with HashMap
+🔄 Day 47 – Reverse string using loop, StringBuilder, recursion, stack
+✅ Day 48 – Palindrome check with two-pointer technique
+🔑 Day 49 – String Pool and difference between == vs .equals()
+
+🔹 Collections & Maps
+
+🗂️ Day 80 – Deep Dive into HashMap (methods, sync, iteration)
+🗂️ Day 81 – HashMap vs LinkedHashMap (insertion order)
+🛑 Day 57 – hashCode() & equals() importance with HashSet
+📊 Day 59 – Deque (Stack & Queue using ArrayDeque vs LinkedList)
+🔺 Day 58 – PriorityQueue (Min Heap & Max Heap)
+
+🔹 Input / Output & Formatting
+
+📋 Day 67 – Scanner next() vs nextLine()
+🖨️ Day 66 – printf() and format specifiers
+🧾 Day 63 – Global Scanner + function for user input
+🧹 Day 51 – finalize() & try-with-resources (AutoCloseable)
+
+🔹 Java 8 Features (Functional Programming)
+
+⚡ Day 18 – Java 8 Features Overview (Streams, Lambdas, Optional, etc.)
+🏷️ Day 19 – Anonymous Classes
+🎭 Day 20 – Functional Interfaces vs Anonymous Classes
+➡️ Day 21 – Lambda Expressions with functional interfaces
+🔧 Day 22 – Built-in Functional Interfaces (Supplier, Consumer, Predicate, Function)
+🔗 Day 23 – Method References vs Lambda
+🔗 Day 24 – Advanced Method References
+
+🔁 Day 27 – Streams vs Collections
+
+🌀 Day 29 – Stream API → distinct(), sorted(), custom comparator
+📊 Day 31 – Stream groupingBy() (group employees by college)
+✅ Day 32 – Stream anyMatch, allMatch, noneMatch
+🔄 Day 33 – map() vs flatMap() (nested lists)
+🧩 Day 34 – Optional class deep dive
+🔍 Day 35 – Optional class (of, ofNullable)
+📆 Day 36 – Java 8 Date & Time API basics
+📆 Day 37 – Date & Time API (Period, Duration, ZonedDateTime)\
+
+🔹 Serialization
+
+💾 Day 70 – Serialization (concepts, transient keyword)
+📦 Day 71 – Externalizable (custom serialization)
+
+🔹 DSA (Algorithms & Problems)
+
+🔍 Day 39 – Linear Search
+🧼 Day 38 – Bubble Sort basics
+🔄 Day 40 – Reverse Bubble Sort (descending order)
+🔑 Day 41 – Find 2nd largest using Bubble Sort & Streams
+❓ Day 42 – Find missing number (sum-based)
+❗ Day 43 – Duplicate detection (brute force)
+⚡ Day 44 – Duplicate detection (HashSet)
+⚙️ Day 97 – Kadane’s Algorithm vs Brute Force (Max Subarray Sum)
+
+🔹 Operators
+
+🔄 Day 46 – Swap numbers (temp vs arithmetic)
+📈 Day 85 – Pre/Post Increment Operator Quiz (20 tricky Qs)
+⏩ Day 89 – Left Shift Operator <<
+⏩ Day 90 – Right Shift Operator >>
+🛑 Day 91 – Sign Bit with 10 Left Shift & 10 Right Shift examples
+⚡ Day 92 – Bitwise AND .
+⚡ Day 93 – Bitwise OR |
+⚡ Day 94 – Bitwise XOR ^
+⚡ Day 95 – Bitwise NOT ~
+📜 Day 96 – Bitwise Operators Cheat Sheet (all 7 operators)
+
+🔹 Generics
+
+📦 Day 98 – Generic Methods (print, compare, getMax)
+📦 Day 99 – Wildcard Generics (?, extends, super)
+
+🔹 Miscellaneous
+
+🧾 Day 61 – Arrays.equals() vs Arrays.deepEquals()
+🧾 Day 60 – Arrays.toString() & Arrays.deepToString()
+📚 Day 52 – Arrays basics (traversal, max element, reverse)
+📦 Day 53 – Arrays of Objects
+🐑 Day 55 – Clone class (shallow copy)
+🔍 Day 56 – Comparable vs Comparator
+🧹 Day 50 – Varargs in Java
+
+🎉 Special Milestones
+
+Day 1 – Variations of writing main method
+Day 2 – Why Java is not 100% OOP
+Day 100 – 📖 This Organized Log of All 100 Days 🚀
+
+👉 This categorization shows OOP, Java 8, Collections, DSA, Operators, Generics, Strings, Arrays, Serialization, Miscellaneous as separate sections.
+
+
+Day wise commits properly
+📌 Git Commit Messages Day-wise
+
+Day 1 – git commit -m "Day 1: Introduction to Java and basic syntax"
+Day 2 – git commit -m "Day 2: Java variables, data types, and operators"
+Day 3 – git commit -m "Day 3: Control statements (if-else, switch, loops) in Java"
+Day 4 – git commit -m "Day 4: Java methods and recursion basics"
+Day 5 – git commit -m "Day 5: Java OOP concepts – Classes and Objects"
+Day 6 – git commit -m "Day 6: Constructors and 'this' keyword in Java"
+Day 7 – git commit -m "Day 7: Inheritance in Java with examples"
+Day 8 – git commit -m "Day 8: Method Overloading and Overriding in Java"
+Day 9 – git commit -m "Day 9: Polymorphism in Java (compile-time and runtime)"
+Day 10 – git commit -m "Day 10: Encapsulation and Access Modifiers in Java"
+Day 11 – git commit -m "Day 11: Abstraction in Java – Abstract classes and methods"
+Day 12 – git commit -m "Day 12: Interfaces in Java with real-world examples"
+Day 13 – git commit -m "Day 13: Static keyword, blocks, and methods in Java"
+Day 14 – git commit -m "Day 14: Final keyword in Java (variables, methods, classes)"
+Day 15 – git commit -m "Day 15: Packages and Import in Java"
+Day 16 – git commit -m "Day 16: Exception Handling in Java – try, catch, finally"
+Day 17 – git commit -m "Day 17: Throw, throws, and custom exceptions in Java"
+Day 18 – git commit -m "Day 18: Java Input/Output (File Handling basics)"
+Day 19 – git commit -m "Day 19: BufferedReader, Scanner, and FileWriter in Java"
+Day 20 – git commit -m "Day 20: Multithreading in Java – Thread class and Runnable"
+Day 21 – git commit -m "Day 21: Thread lifecycle, join(), sleep(), and synchronization"
+Day 22 – git commit -m "Day 22: Java Collections Framework – Introduction"
+Day 23 – git commit -m "Day 23: ArrayList in Java – properties, methods, and use cases"
+Day 24 – git commit -m "Day 24: LinkedList in Java – properties, methods, and differences"
+Day 25 – git commit -m "Day 25: Vector and Stack in Java – implementations and use cases"
+Day 26 – git commit -m "Day 26: PriorityQueue in Java with examples"
+Day 27 – git commit -m "Day 27: HashSet in Java – uniqueness and internal working"
+Day 28 – git commit -m "Day 28: LinkedHashSet vs HashSet – ordering and performance"
+Day 29 – git commit -m "Day 29: TreeSet in Java – sorted set implementation"
+Day 30 – git commit -m "Day 30: HashMap in Java – key-value pairs and operations"
+Day 31 – git commit -m "Day 31: LinkedHashMap in Java with examples"
+Day 32 – git commit -m "Day 32: TreeMap in Java – sorted key-value pairs"
+Day 33 – git commit -m "Day 33: Java Map.Entry and Iteration techniques"
+Day 34 – git commit -m "Day 34: Java Queue and Deque – operations and implementations"
+Day 35 – git commit -m "Day 35: Java Collections Utility class methods"
+Day 36 – git commit -m "Day 36: Comparable vs Comparator in Java with examples"
+Day 37 – git commit -m "Day 37: Java Streams vs Collections – detailed examples"
+Day 38 – git commit -m "Day 38: DSA – Arrays basics and operations"
+Day 39 – git commit -m "Day 39: DSA – Searching algorithms (Linear Search, Binary Search)"
+Day 40 – git commit -m "Day 40: DSA – Sorting algorithms (Bubble, Selection, Insertion)"
+Day 41 – git commit -m "Day 41: DSA – Merge Sort and Quick Sort implementations"
+Day 42 – git commit -m "Day 42: DSA – Strings basics and common problems"
+Day 43 – git commit -m "Day 43: DSA – Palindrome and Anagram string problems"
+Day 44 – git commit -m "Day 44: DSA – String reversal, duplicates, and frequency count"
+Day 45 – git commit -m "Day 45: DSA – Linked List introduction and implementation"
+Day 46 – git commit -m "Day 46: DSA – Singly Linked List operations"
+Day 47 – git commit -m "Day 47: DSA – Doubly Linked List operations"
+Day 48 – git commit -m "Day 48: DSA – Circular Linked List operations"
+Day 49 – git commit -m "Day 49: DSA – Stack implementation using arrays and LinkedList"
+Day 50 – git commit -m "Day 50: DSA – Queue implementation using arrays and LinkedList"
+Day 51 – git commit -m "Day 51: DSA – Recursion problems in Java"
+Day 52 – git commit -m "Day 52: DSA – Backtracking basics and problems"
+Day 53 – git commit -m "Day 53: DSA – Binary Tree introduction and traversal methods"
+Day 54 – git commit -m "Day 54: DSA – Binary Search Tree (BST) operations"
+Day 55 – git commit -m "Day 55: DSA – Tree problems and depth calculations"
+Day 56 – git commit -m "Day 56: DSA – Graph representation and BFS"
+Day 57 – git commit -m "Day 57: DSA – Graph DFS traversal with examples"
+Day 58 – git commit -m "Day 58: DSA – Shortest Path algorithms (Dijkstra, Bellman-Ford)"
+Day 59 – git commit -m "Day 59: DSA – Dynamic Programming introduction"
+Day 60 – git commit -m "Day 60: DSA – Fibonacci and Knapsack using DP"
+Day 61 – git commit -m "Day 61: DSA – Greedy algorithms basics"
+Day 62 – git commit -m "Day 62: DSA – Activity Selection and Huffman coding"
+Day 63 – git commit -m "Day 63: DSA – Bit Manipulation basics"
+Day 64 – git commit -m "Day 64: DSA – Subset and Power Set problems using bits"
+Day 65 – git commit -m "Day 65: DSA – Sliding Window technique with problems"
+Day 66 – git commit -m "Day 66: DSA – Two Pointers technique with problems"
+Day 67 – git commit -m "Day 67: DSA – Hashing techniques with problems"
+Day 68 – git commit -m "Day 68: DSA – Heap introduction and Heap Sort"
+Day 69 – git commit -m "Day 69: DSA – Priority Queue applications in problems"
+Day 70 – git commit -m "Day 70: DSA – Divide and Conquer problems"
+Day 71 – git commit -m "Day 71: DSA – Recurrence Relations and Master Theorem"
+Day 72 – git commit -m "Day 72: DSA – Time Complexity basics with Big-O"
+Day 73 – git commit -m "Day 73: DSA – Space Complexity analysis"
+Day 74 – git commit -m "Day 74: DSA – Constant and Linear time algorithms"
+Day 75 – git commit -m "Day 75: DSA – Logarithmic and Quadratic time algorithms"
+Day 76 – git commit -m "Day 76: DSA – n log n, Exponential and Factorial complexities"
+Day 77 – git commit -m "Day 77: DSA – Revision of Arrays and Strings problems"
+Day 78 – git commit -m "Day 78: DSA – Revision of Linked Lists and Stacks"
+Day 79 – git commit -m "Day 79: DSA – Revision of Trees and Graphs"
+Day 80 – git commit -m "Day 80: Java HashMap – methods, iteration, synchronization"
+Day 81 – git commit -m "Day 81: Java HashMap advanced – use cases and real-world examples"
+Day 82 – git commit -m "Day 82: Function Composition in Java – compose, andThen, identity"
+Day 83 – git commit -m "Day 83: Real-world examples of Function Composition with strings"
+Day 84 – git commit -m "Day 84: Java Enums – constructors, methods, use cases"
+Day 85 – git commit -m "Day 85: EnumSet in Java – usage and benefits"
+Day 86 – git commit -m "Day 86: EnumMap in Java – usage and benefits"
+Day 87 – git commit -m "Day 87: EnumMap advanced examples with real-world cases"
+Day 88 – git commit -m "Day 88: DSA – Focused Aptitude and DSA discipline plan"
+Day 89 – git commit -m "Day 89: DSA – Practiced LeetCode Array rotation problem"
+Day 90 – git commit -m "Day 90: DSA – Practiced Searching and Sorting problems"
+Day 91 – git commit -m "Day 91: DSA – More Array and String problems"
+Day 92 – git commit -m "Day 92: Bitwise AND operator in Java with 20 examples"
+Day 93 – git commit -m "Day 93: Bitwise OR operator in Java with examples"
+Day 94 – git commit -m "Day 94: Bitwise XOR operator in Java with examples"
+Day 95 – git commit -m "Day 95: Bitwise NOT operator in Java with examples"
+Day 96 – git commit -m "Day 96: Bitwise Shift operators (<<, >>, >>>) with examples"
+Day 97 – git commit -m "Day 97: Kadane's Algorithm vs Brute Force for Maximum Subarray"
+Day 98 – git commit -m "Day 98: Java Generics – generic classes and methods"
+Day 99 – git commit -m "Day 99: Java Generics with methods – examples and use cases"
