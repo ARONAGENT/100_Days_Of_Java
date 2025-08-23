@@ -1,10 +1,10 @@
 # 📘 100 Days of Java Learning Journey 🚀
 
-![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apache-maven&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)
-![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)
+[![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+[![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white)](https://spring.io/)
+[![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apache-maven&logoColor=white)](https://maven.apache.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://github.com/ARONAGENT)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=flat-square)](https://github.com/ARONAGENT)
 
 ## 🎯 Overview
 
